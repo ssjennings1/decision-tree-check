@@ -1,5 +1,17 @@
 # The Decision Tree — canonical model
 
+**Original graphic:** `design/decision-tree-original.png` (Shannon's own, shared 2026-10-27). Its definitions, which differ slightly from the Oct 26 Seed wording:
+
+| Level | Original graphic | Oct 26 Seed wording |
+|-------|------------------|---------------------|
+| Leaf | Employees empowered to make these without taking the manager's time. Example: FedEx or UPS? | You decide. No need to tell me. |
+| Branch | Employees empowered to make these and report what they've done to their manager. | You decide, then tell me. |
+| Limb | Employee and supervisor make this decision together. | You decide, but talk to me before you act. |
+| Trunk | Employee and supervisor involve additional teams/leaders, because it reaches beyond the functional area. | We decide together. |
+| Root | Made by the whole organization; may involve key stakeholders. | I decide, with input from the people who'll live with it. |
+
+The two agree on the shape (who gets involved widens as you go down the tree). They differ on Limb (together vs. talk first) and Root (whole organization vs. owner with input). Which one governs is Shannon's call; the tool's item placements are checked against both below.
+
 Source: Shannon's own teaching, latest wording from the Saturday Seed welcome sequence Email 2 (Oct 26, 2026) and Field Note 1. Credit line: *"The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in my hands since."*
 
 The tree is just one metaphor. Build one that works for you. The idea is clarity around responsibility, decision-making, and communication: everyone knows what they can decide on their own, what they need to report back on, and what they'd better not do alone.
