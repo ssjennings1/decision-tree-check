@@ -1,49 +1,64 @@
 # Result pages
 
-Three results. Same shape each time: what it means, what it looks like from inside, one move for Monday, one quiet line. Written for a phone screen. No em dashes, no named frameworks beyond the tree itself.
+Three patterns. Each named for what the owner IS, not what's wrong. Same shape every time: the name, the number, the heaviest branch, what it looks like from inside, One Move for Monday, two buttons. Phone-first. No em dashes in body copy.
 
-Merge field note: `{{quiz_tags.highest_category_name}}` is the builder's own merge tag for the highest-scoring category. It renders one word (People, Customers, Money, or Operations), so the sentences below are written to read naturally with a single word.
+Merge tags (Taft): `{{quiz_tags.overall_score}}` for the number, `{{quiz_tags.highest_category_name}}` renders one word (People, Customers, Money, Operations).
+
+Branch lines (Individual Category section, one per category):
+- People: "The heaviest branch right now is **People**: schedules, time off, who does what."
+- Customers: "The heaviest branch right now is **Customers**: promises, rush jobs, 'when will it be ready.'"
+- Money: "The heaviest branch right now is **Money**: small purchases, bills, the stuff that isn't really a money decision."
+- Operations: "The heaviest branch right now is **Operations**: suppliers, quality, what gets done when."
 
 ---
 
-## Result A (0–12) — Your tree holds its own weight.
+## Result A (0–12) — The Shade Tree
 
-Most of the small stuff gets handled without you, and the people handling it know when to loop you in. That's not luck. Somewhere along the way you drew the lines, or your people figured them out and you let them.
+**Desk Load: {{quiz_tags.overall_score}} of 40.**
 
-Here's what that buys you: the decisions that reach your desk are mostly the ones that should. Direction. Risk. The calls that shape everything else.
+Most of the small stuff never reaches you, and the people handling it know when to loop you in. People work under your tree, not around it.
 
-**One move for Monday.** Find the one leaf that still climbs. Your answers put the most weight on {{quiz_tags.highest_category_name}}. Pick one decision in that lane this week and ask the person who brought it, "What would you do?" Then let them.
+That didn't happen by accident. Somewhere along the way you drew the lines, or your people figured them out and you let them. What it buys you: the decisions that do reach your desk are mostly the ones that should. Direction. Risk. The calls that shape everything else.
+
+**One Move for Monday.** Find the one leaf that still climbs. Pick one decision in your heaviest branch this week and ask the person who brought it, "What would you do?" Then let them.
 
 The next stage of growth puts new weight on the tree. When you want a second set of eyes on where the lines should move, that's a conversation I'm glad to have.
 
 ---
 
-## Result B (13–26) — Half the canopy is on your desk.
+## Result B (13–26) — The Switchboard
 
-A good share of the everyday calls still come to you, and a good share don't. That's normal for a company that grew by you being good at the work. People bring you things because you have the answer, and because they're not sure they're allowed to.
+**Desk Load: {{quiz_tags.overall_score}} of 40.**
 
-From your chair it looks like interruptions. From theirs it looks like respect, or caution. Either way, the tree can't carry more growth until some of that weight moves down.
+A good share of the everyday calls still route through you, and a good share don't. You're the connection point. Everybody knows that if they plug into you, they'll get an answer.
 
-**One move for Monday.** Look at the last five things that landed on your desk. Where do they belong on the tree? Your answers put the most weight on {{quiz_tags.highest_category_name}}. Pick one decision there, hand it back to the person it belongs to, and tell them the new rule: you decide, then tell me.
+That's how a company grows when the owner is good at the work. People bring you things because you have the answer, and because they're not sure they're allowed to decide. From your chair it looks like interruptions. From theirs it looks like respect, or caution. The tree can't carry more growth until some of that weight moves down.
 
-If you want help drawing the lines with your management team instead of one decision at a time, that's the kind of room I hold.
+**One Move for Monday.** Look at the last five things that landed on your desk. Pick one from your heaviest branch, hand it back to the person it belongs to, and give them the new rule: you decide, then tell me.
+
+If you'd rather draw the lines with your whole management team instead of one decision at a time, that's the kind of room I hold.
 
 ---
 
-## Result C (27–40) — Everything runs through you.
+## Result C (27–40) — The Builder
 
-Nearly every situation on the list came to you, or waited for you. That's how it grew. You were the answer to every question in the building, and it worked. It's also why you can't step away without things slowing down, and why you're the last to hear about the things that matter.
+**Desk Load: {{quiz_tags.overall_score}} of 40.**
 
-Nobody did this to you. It's what happens when a company outgrows one person's ability to see everything and nobody has drawn the lines yet.
+Nearly everything on the list came to you, or waited for you. That's because you built this. You were the answer to every question in the building, and that's exactly how it grew.
 
-**One move for Monday.** Pick the one decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule attached. "This is yours. Make the call and tell me after." Then do it again next week.
+It's also why you can't step away without things slowing down, and why you're the last to hear about the things that matter. Nobody did this to you. It's what happens when a company outgrows one person's ability to see everything and nobody has drawn the lines yet. The good news: builders are good at drawing lines. You just haven't pointed that at this.
+
+**One Move for Monday.** Pick the one decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule attached: "This is yours. Make the call and tell me after." Then do it again next week.
 
 When you're ready to draw the lines for the whole tree, with your people in the room, that's the work I do. Fifteen minutes is enough to see if it fits.
 
 ---
 
-## Button under every result
+## Buttons (all three results)
 
-**Primary:** Send me one idea a week (Saturday Seed) — only if the opt-in checkbox was NOT ticked; otherwise hide.
-**Secondary (Results B and C):** Book 15 minutes with Dr. J → https://link.syncovatellc.com/widget/bookings/book-a-15-min-clarity-call
-**Result A:** Secondary button optional. Recommendation: show it; a low score is often a strong owner who knows what they want.
+**Primary:** Book 15 minutes with Dr. J → https://link.syncovatellc.com/widget/bookings/book-a-15-min-clarity-call
+**Secondary:** Send this to an owner you know → mailto: link with subject "Two minutes, no grade" and body "Ten things that happen in every company. Pick where each one landed last week. I got The {{pattern}}. syncovatellc.com/desk"
+
+## Footer (small type)
+
+The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in Dr. J's hands since. This is a gut check, not a diagnosis.

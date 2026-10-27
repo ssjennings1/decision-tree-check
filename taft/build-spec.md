@@ -1,4 +1,4 @@
-# Taft build spec — The Decision Tree Check
+# Taft build spec — The Decision Tree Check ("What Landed on Your Desk Last Week?")
 
 Click-by-click instructions for building the quiz in Taft (GoHighLevel). Written so Shannon can build it herself, or Claude can drive it in Chrome with Shannon present. Nothing here is done by API: quizzes, result pages and workflows have no API endpoints. Email templates, custom fields and tags can be created by API in Stage 3 if Shannon green-lights it; otherwise they're built here too.
 
@@ -31,9 +31,9 @@ Five templates, html editor, plain personal look (Verdana, no header art, gold #
 
 | Template name | Subject | Preview |
 |---------------|---------|---------|
-| DT Result A – Your tree holds its own weight | Your tree holds its own weight | Here's your result and the one move for Monday. |
-| DT Result B – Half the canopy is on your desk | Half the canopy is on your desk | Here's your result and the one move for Monday. |
-| DT Result C – Everything runs through you | Everything runs through you | Here's your result and the one move for Monday. |
+| DT Result A – The Shade Tree | You're a Shade Tree | Desk Load NN of 40. Here's the one move. |
+| DT Result B – The Switchboard | You're a Switchboard | Desk Load NN of 40. Here's the one move. |
+| DT Result C – The Builder | You're a Builder | Desk Load NN of 40. Here's the one move. |
 | DT Follow-up – Which one did you hand back | Which one did you hand back? | A quick follow-up on your Decision Tree Check. |
 | DT Follow-up – Which one did you hand back (Seed subscriber) | Which one did you hand back? | A quick follow-up on your Decision Tree Check. |
 
@@ -41,7 +41,7 @@ Merge field for the heaviest branch: open the custom-values picker in the editor
 
 ## 4. The quiz (Sites → Quizzes → + New Quiz)
 
-**Name:** The Decision Tree Check. Theme: cream background #FAF8F5, gold #BF8756 buttons, charcoal #252830 text. Fonts as close to Cormorant Garamond / DM Sans as the builder offers.
+**Name:** The Decision Tree Check. (Door title "What landed on your desk last week?" goes on the intro page and the landing page; the quiz name stays "The Decision Tree Check" because it prefixes the custom fields.) Theme: cream background #FAF8F5, gold #BF8756 buttons, charcoal #252830 text. Fonts as close to Cormorant Garamond / DM Sans as the builder offers.
 
 **Manage Categories:** create People, Customers, Money, Operations.
 
@@ -51,40 +51,41 @@ Merge field for the heaviest branch: open the custom-values picker in the editor
 - Text element: the situation sentence.
 - Single Choice question, label: "Last time this happened, where did it land?" Required.
 - Five options, in this order, with scores 0, 1, 2, 3, 4:
-  1. Someone handled it. I never heard about it.
-  2. Someone handled it and told me after.
-  3. They checked with me before they acted.
-  4. We worked it out together.
-  5. It came to me, and I decided.
+  1. Never heard about it. Somebody handled it.
+  2. Handled. Then they told me.
+  3. They checked with me first.
+  4. We hashed it out together.
+  5. Came to me. I made the call.
 - Assign every option on the page to the page's category (People / Customers / Money / Operations per the table in the spec). Do not use "Overall Only."
 - Tip: build page 2 fully, then duplicate the page nine times and change only the situation text and the category.
 
 Situations and categories (from `design/quiz-spec.md`):
-1. A customer calls upset. A job or order didn't go the way they expected. (Customers)
+1. A customer calls to ask when their order will be ready. (Customers)
 2. Two people on a crew or shift want to swap days. (People)
-3. A tool or small piece of equipment breaks and needs replacing. A few hundred dollars, not a few thousand. (Money)
+3. A tool breaks and needs replacing. A few hundred bucks, not a few thousand. (Money)
 4. A supplier says a delivery is going to be a day late. (Operations)
-5. An employee asks for next Friday off. (People)
+5. Somebody asks for next Friday off. (People)
 6. A regular customer asks if you can squeeze in a rush job. (Customers)
 7. Somebody catches a quality problem before it goes out the door. (Operations)
-8. Two of your people disagree about how a job should be done. (People)
+8. A crew needs to know which job to start first tomorrow. (People)
 9. A software renewal or a small recurring bill comes due. (Money)
-10. A new hire's first week needs to be planned. (People)
+10. A new hire's first week needs a plan. (Operations)
 
 **Page 12 (opt-in):**
-- Text: "Your result is ready." + body copy from the spec.
+- Text: "Your result's ready." + body copy from the spec.
 - First Name element, required. Email element, required.
 - Object Field: Company Size (dropdown).
 - Object Field: Seed Opt-in, label "Also send me the Saturday Seed, one leadership idea a week you can put into play Monday." Default No.
 - Text (small): No spam. Unsubscribe any time.
-- Submit button text: Show my result.
+- Submit button text: Show me.
 
 **Results template (Results → Edit Template):**
 - Header: Syncovate wordmark, title "Your Decision Tree Check."
-- Overall Score section: tiers as percentages. A: 0–30. B: 31–65. C: 66–100. Tier labels exactly "A", "B", "C" (these become the Overall Tier field values the workflow branches on). Tier message = the matching result copy from `copy/result-pages.md`. Hide the numeric score if the builder allows.
+- Overall Score display ON, format "actual score", labeled "Desk Load" (out of 40).
+- Overall Score section: tiers as percentages. A: 0–30. B: 31–65. C: 66–100. Tier labels exactly "The Shade Tree", "The Switchboard", "The Builder" (these become the Overall Tier field values the workflow branches on, and the headline the taker sees). Tier message = the matching result copy from `copy/result-pages.md`.
 - Category Score breakdown: off (it would show four percentages and turn the result into a report card).
 - Individual Category section: display Highest. One short line per category, e.g. People: "Right now the heaviest branch is people: schedules, time off, who does what, disagreements." Same pattern for Customers, Money, Operations using the category wording in the spec.
-- CTA button: "Book 15 minutes with Dr. J" → https://link.syncovatellc.com/widget/bookings/book-a-15-min-clarity-call. Per-tier CTA if the builder allows (B and C show it; A optional, see open questions).
+- CTA button on every tier: "Book 15 minutes with Dr. J" → https://link.syncovatellc.com/widget/bookings/book-a-15-min-clarity-call. Second link in the body text: "Send this to an owner you know" (mailto, see `copy/result-pages.md`).
 - Footer: syncovatellc.com, LinkedIn.
 - Settings → Custom Fields: turn ON sync for Overall Score, Overall Tier, Highest Category Name. Leave the rest off.
 
@@ -104,13 +105,13 @@ Then two more tests: all first answers (expect A, score 0) and a mix landing at 
 
 ## 7. Page (Sites → Websites → the live Syncovate 2026 site)
 
-New page at `/decision-tree` from the sandbox page style. Copy in `copy/landing-page.md`. Quiz embedded via Integrate → embed code pasted into a Custom HTML / Code element under the hero, or the hero button links to the quiz's direct link (simpler, and the quiz page is already mobile-friendly). Recommendation: button to the direct link first; embed later if the bounce is high.
+New page at `/desk` from the sandbox page style. Copy in `copy/landing-page.md`. Quiz embedded via Integrate → embed code pasted into a Custom HTML / Code element under the hero, or the hero button links to the quiz's direct link (simpler, and the quiz page is already mobile-friendly). Recommendation: button to the direct link first; embed later if the bounce is high.
 
-Add `/decision-tree` to the nav or footer under Writing / Resources once it's live.
+Add `/desk` to the footer under Writing / Resources once it's live.
 
 ## 8. Redirect and retire the old tool
 
-- Taft: create redirect `spotter.syncovatellc.com/*` → `https://syncovatellc.com/decision-tree` (API `create-redirect` works, or Sites → Redirects).
+- Taft: create redirect `spotter.syncovatellc.com/*` → `https://syncovatellc.com/desk` (API `create-redirect` works, or Sites → Redirects).
 - DNS: `spotter` currently CNAMEs to GitHub Pages. Repoint it to Taft per Taft's domain instructions, or drop the subdomain entirely and let the GitHub Pages site go dark (nothing links to it today).
 - GitHub: remove `CNAME` from `ssjennings1/scotoma-spotter` and archive the repo.
 

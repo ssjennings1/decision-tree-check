@@ -4,6 +4,41 @@ Newest first. Same shape every time: what I did, what I decided on my own, what 
 
 ---
 
+## 2026-10-27 (afternoon) — Session 2: the experimental run
+
+Shannon's brief: make every call, nothing goes live, deliver a fully functioning, ready-to-launch tool and strategy. Fun, interactive, useful, a gut check not a scientific tool.
+
+**What I built**
+- A clickable prototype of the whole flow (door, ten questions, opt-in page, result with Desk Load, heaviest branch, pattern, One Move, share text). Published privately; file at `prototype/index.html`. It mirrors the Taft build exactly so what you click is what gets built.
+- Final copy in the gut-check tone: spec, three result pages, five emails plus a personal note for Builders, landing page.
+- The launch strategy (`strategy/launch-plan.md`): list first, partners second, DisruptHR QR third, LinkedIn last. Numbers to watch, kill criteria, and what version two would be.
+- The launch kit (`strategy/launch-kit.md`): the list email, the partner email with a forwardable paragraph, the QR slide, the scanner thank-you, a LinkedIn carousel, a poll and results post, evergreen lines, and a reply bank for when results come in.
+- Two more research memos: titles and engagement, plus your 2026 lead-gen report saved into `research/`.
+
+**The calls I made (all in `DECISIONS.md`)**
+- Door title "What Landed on Your Desk Last Week?"; asset name "The Decision Tree Check"; slug `/desk`.
+- Show the score (Desk Load, NN of 40) AND name the pattern.
+- Pattern names: The Shade Tree, The Switchboard, The Builder. The highest-load result gets the most flattering name on purpose.
+- Seed opt-in defaults to No. Q1 and Q8 swapped. Booking button on all results. Builders get a personal note from you within 24 hours (drafted).
+- Scope stays narrow; the four-dimension version is v2.
+- Launch tied to DisruptHR.
+
+**What I'd want you to check first**
+1. Take the prototype on your phone. Answer as a client you know. Does the result sound like something you'd say to them?
+2. The three pattern names. They're mine; you may have better words from the room.
+3. The partner email. That one goes out under your name to people whose trust the practice runs on.
+
+**What I didn't do**
+- Anything in Taft. Stages 3–6 are specified click by click and ready.
+- Confirm Taft's category tie-break or the On Submit / results-page interaction. Both are test steps in the build spec.
+
+**What's next, if you say go**
+- Stage 3 by API (tags, fields, five email templates): about an hour, reversible.
+- Stage 4 in the browser with you present (the quiz, the result template, the workflow): about two hours.
+- Then the launch plan runs on your calendar.
+
+---
+
 ## 2026-10-27 — Session 1: research and design
 
 **What I did**

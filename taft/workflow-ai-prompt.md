@@ -10,12 +10,12 @@ Build a workflow named "Decision Tree Check – Results".
 
 Trigger: Quiz Submitted, filter Quiz is "The Decision Tree Check". (If the trigger is not available, use Contact Tag Added, tag "decision-tree-check".)
 
-Step 1: Add tag "decision-tree-check".
+Step 1: Add tag "decision-tree-check". Then If/Else on the custom field "The Decision Tree Check - Overall Tier" to add tag dt-result-a, dt-result-b or dt-result-c.
 
 Step 2: If/Else on contact tag:
-- Branch A: has tag "dt-result-a" → Send Email using template "DT Result A – Your tree holds its own weight".
-- Branch B: has tag "dt-result-b" → Send Email using template "DT Result B – Half the canopy is on your desk".
-- Branch C: has tag "dt-result-c" → Send Email using template "DT Result C – Everything runs through you", then Internal Notification by email to a particular user, Shannon Jennings, subject "Decision Tree Check: {{contact.first_name}} {{contact.last_name}} scored C", body with name, email, company size, heaviest branch, and the line "No automated pitch was sent. Your call whether to reach out."
+- Branch A: Overall Tier field is "The Shade Tree" (or tag "dt-result-a") → Send Email using template "DT Result A – The Shade Tree".
+- Branch B: Overall Tier field is "The Switchboard" (or tag "dt-result-b") → Send Email using template "DT Result B – The Switchboard".
+- Branch C: Overall Tier field is "The Builder" (or tag "dt-result-c") → Send Email using template "DT Result C – The Builder", then Internal Notification by email to a particular user, Shannon Jennings, subject "Builder result: {{contact.first_name}} {{contact.last_name}}", body with name, email, company size, heaviest branch; then Add Task assigned to Shannon Jennings, due in 1 day, title "Send personal note to {{contact.first_name}} (Builder)", description = the Email 3 draft text from copy/emails.md.
 
 Step 3 (all branches rejoin): Wait 3 days.
 
