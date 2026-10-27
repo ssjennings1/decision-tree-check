@@ -15,15 +15,15 @@ Sent as a one-off campaign, not a Seed. Plain personal look.
 
 I built something small and I want you to try it before anyone else does.
 
-Ten things that happen in every company. A tool breaks. Somebody wants Friday off. A customer calls asking when the order's ready. For each one, you pick where it landed last week. Never reached you, reached you after, you made the call.
+Eighteen things that happen in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the ones that landed on your desk last week.
 
-Two minutes. No wrong answers, no grade. At the end you get a number (your Desk Load), the one branch of the business carrying the most, and one thing to hand back on Monday.
+Two minutes. No wrong answers, no grade. At the end you get a picture of your tree, whether it fits the size of your company and the seat you're in, and one thing to try Monday. It works for your leadership team too. Compare trees.
 
 [Screenshot of the door screen]
 
 [Take the desk check]
 
-Then hit reply and tell me two things: your number, and whether any question made you laugh or wince. I'm reading every reply this week and fixing what's clumsy.
+Then hit reply and tell me two things: what the picture showed, and whether anything made you laugh or wince. I'm reading every reply this week and fixing what's clumsy.
 
 Dr. J
 
@@ -39,11 +39,11 @@ Send from Shannon's own inbox. Change the first paragraph for each person; the r
 
 [One personal line. Something you two talked about last time, or a reverse referral: "I sent Dan from Mid City your way last month; let me know if he reached out."]
 
-I built a quick gut check for owners and I think a few of your clients would get something out of it. Ten everyday situations, pick where each one landed last week, two minutes, no grade. It tells them how much of the small stuff is still climbing to their desk and gives them one decision to hand back.
+I built a quick gut check for owners and I think a few of your clients would get something out of it. Eighteen everyday things, tap what landed on your desk last week, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
 
 If an owner ever says to you "everything still runs through me," this is the thing to send them. Here's a paragraph you can forward as-is:
 
-> Shannon Jennings, who I've worked with, built a two-minute check for owners. Ten things that happen in every company. You pick where each one landed last week. No sales pitch, no grade, just a number and one thing to try Monday. syncovatellc.com/desk
+> Shannon Jennings, who I've worked with, built a two-minute check for owners. Eighteen things that happen in every company. You tap what landed on your desk last week and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
 
 And if you'd like to try it yourself first, you'll know in two minutes whether it's worth passing on.
 
@@ -107,10 +107,10 @@ Post text: "I asked an owner to write down everything that reached her desk in o
 ## 6. LinkedIn poll (week +2)
 
 **Question:** A tool on the shop floor breaks. A few hundred bucks to replace. Last time that happened, where did it land?
-**Options (4, no yes/no):** Never reached me · Reached me after · They checked first · I made the call
+**Options (4):** Never reached me · Reached me after · They checked first · I made the call
 **Duration:** 3 days.
 
-**Results post (week +2, after the poll closes):** "[N] owners answered. [X]% said the broken tool came to them. A few hundred dollars. The person who found it broken already knew it needed replacing. Here's what I'd say to each group: [one line per answer]. If you want to see where the other nine land, two minutes, no grade: syncovatellc.com/desk"
+**Results post (week +2, after the poll closes):** "[N] owners answered. [X]% said the broken tool came to them. A few hundred dollars. The person who found it broken already knew it needed replacing. Here's what I'd say to each group: [one line per answer]. If you want to see your whole desk on the tree, two minutes, no grade: syncovatellc.com/desk"
 
 ---
 
@@ -127,7 +127,8 @@ Post text: "I asked an owner to write down everything that reached her desk in o
 
 Short replies she can send to people who hit reply. Edit freely.
 
-- To a Shade Tree: "Nice. What did you do to get there? I'm collecting those stories."
-- To a Switchboard: "Switchboards are usually the best people in the building. Which one did you hand back?"
-- To a Builder: "Every owner I've worked with started there. What's the one decision you're sick of making?"
+- To an on-track result: "Nice. What did you do to get there? I'm collecting those stories."
+- To a climbing result: "Every owner I've worked with started there. What's the one decision you're sick of making?"
+- To a drifting result: "That's the one most owners never see. What was the biggest call made without you last month?"
+- To a team member: "Send it to your owner. Compare trees Thursday. Tell me what you find."
 - To "a question made me wince": "Which one? That's the one I want to hear about."

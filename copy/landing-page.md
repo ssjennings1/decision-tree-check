@@ -8,24 +8,24 @@ One job: get a start. Headline question, one line of what you get, a button with
 
 **H1:** What landed on your desk last week?
 
-**Sub:** Ten things that happen in every company. Pick where each one landed. No wrong answers, no grade.
+**Sub:** Eighteen things that happen in every company. Tap the ones that came to you. No wrong answers, no grade.
 
 **Button:** Let's see · about 2 minutes
 
-**Under the button (small):** You'll get your Desk Load, the one branch carrying the most, and one thing to hand back Monday.
+**Under the button (small):** You'll get a picture of your tree, whether it fits your stage and your seat, and one thing to try Monday.
 
 ---
 
 **Strip (three short items, no icons needed):**
-- 10 situations you'll recognize
-- A number you can repeat to your spouse
+- 18 things you'll recognize
+- A picture of your tree you can send to your team
 - One move for Monday
 
 ---
 
 **One paragraph, with the photo:**
 
-I'm Shannon Jennings. I work with owners who built the company by being the answer to every question in the building, and now the questions won't stop. This isn't a test. It's a quick look at which decisions are still climbing to you, so you can hand one back.
+I'm Shannon Jennings. I work with owners who built the company by being the answer to every question in the building, and now the questions won't stop. This isn't a test. It's a quick picture of which decisions are climbing to you and which are drifting, so you can move one.
 
 **Button (repeat):** Let's see
 

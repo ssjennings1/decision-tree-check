@@ -1,125 +1,118 @@
-# Taft build spec — The Decision Tree Check ("What Landed on Your Desk Last Week?")
+# Taft build spec v2 — survey → scored redirect → designed pages → workflow
 
-Click-by-click instructions for building the quiz in Taft (GoHighLevel). Written so Shannon can build it herself, or Claude can drive it in Chrome with Shannon present. Nothing here is done by API: quizzes, result pages and workflows have no API endpoints. Email templates, custom fields and tags can be created by API in Stage 3 if Shannon green-lights it; otherwise they're built here too.
+The mechanism the 2026 contractor build used, with none of its content. Nothing here is done by API except where marked; surveys, pages and workflows are built in the browser. Shannon builds, or Claude drives Chrome with Shannon present.
 
-Order matters: fields → email templates → quiz → workflow → page → test.
+Order: custom fields → tags → email templates → result pages → survey → workflow → test → redirect and retire.
 
-Login: app.taftsystems.com (location: Syncovate).
+Login: app.taftsystems.com. Location yCTzggMS1VT4xrqF3lML.
+
+**Verify first (10 minutes, Shannon):** open Surveys → the old "Scotoma Spotter™" survey → Settings, and confirm the survey builder has (a) a score/points value per answer option and (b) "redirect by score range" (the old build routed on "Score less than 30," so it should). If scoring per answer is missing, the fallback is the Quiz Builder for scoring plus its results page (see `research/quiz-practice.md`), and the designed pages become the email instead.
 
 ---
 
-## 1. Custom fields (Settings → Custom Fields)
+## 1. Custom fields (API-able; folder "Decision Tree Check")
 
-Create two fields in a folder called "Decision Tree Check":
+| Field | Type | Notes |
+|-------|------|-------|
+| dt_item_01 … dt_item_18 | Yes/No (radio) | one per item, mapped from the survey; "Yes" = landed on my desk |
+| dt_company_size | Dropdown | Under 10 / 10–25 / 26–40 / 41–100 / 100+ |
+| dt_role | Dropdown | Owner / Leadership team / Manager / Family member |
+| dt_stage | Text | Builder / Stretching / Architect (workflow writes) |
+| dt_state | Text | ok / climb / drift (workflow writes) |
+| dt_leaf, dt_branch, dt_limb, dt_trunk, dt_root | Number | items lit per level (workflow Math Operation) |
+| dt_green_flag, dt_red_flag | Text (long) | workflow writes the flag sentence |
+| seed_optin | Yes/No | from the opt-in page |
 
-| Name | Type | Options |
-|------|------|---------|
-| Company Size | Dropdown (single) | Under 10 / 10–25 / 26–75 / 76–200 / 200+ |
-| Seed Opt-in | Radio or Dropdown | Yes / No |
+Check first whether a company-size field already exists (Saturday Seed form); reuse if so.
 
-Both: "Show in forms" on. (The three result fields are auto-created by the quiz later; don't make them by hand.)
+## 2. Tags (API-able)
 
-Check first: a company-size field may already exist from the Saturday Seed form or other forms. Reuse it if so.
+`decision-tree-check`, `dt-stage-builder`, `dt-stage-stretching`, `dt-stage-architect`, `dt-state-ok`, `dt-state-climb`, `dt-state-drift`, `dt-role-owner`, `dt-role-lead`, `dt-role-mgr`, `dt-role-fam`. Plus the Saturday Seed source tag (read it from the "Saturday Seed – Welcome Sequence" workflow trigger; write it here: `________`).
 
-## 2. Tags
+## 3. Email templates (API-able; names exact)
 
-Create or confirm: `decision-tree-check`, `dt-result-a`, `dt-result-b`, `dt-result-c`. Confirm the exact Saturday Seed source tag by opening the "Saturday Seed – Welcome Sequence" workflow (id 2da7a557-83f4-4600-9bfd-1616172f77f9) and reading its trigger. Write it here: `________`.
+| Template | Subject |
+|----------|---------|
+| DT Result – Owner | Your desk, on the tree |
+| DT Result – Leadership team | Your desk, on the tree |
+| DT Result – Manager | Your desk, on the tree |
+| DT Follow-up – Which one did you hand back | Which one did you hand back? |
+| DT Follow-up – Which one did you hand back (Seed subscriber) | Which one did you hand back? |
+| DT Event – Thanks for scanning | The one idea from today |
 
-## 3. Email templates (Marketing → Emails → Templates)
+Bodies in `copy/emails.md`. The result emails merge `{{contact.dt_stage}}`, `{{contact.dt_state}}` copy blocks (via If/Else in the workflow or three owner variants), `{{contact.dt_green_flag}}`, `{{contact.dt_red_flag}}`.
 
-Five templates, html editor, plain personal look (Verdana, no header art, gold #BF8756 links, Dr. J signature block). Bodies in `copy/emails.md`. Names must match exactly; the workflow prompt refers to them by name.
+## 4. Result pages (Sites → Websites → Syncovate 2026 → Add new page)
 
-| Template name | Subject | Preview |
-|---------------|---------|---------|
-| DT Result A – The Shade Tree | You're a Shade Tree | Desk Load NN of 40. Here's the one move. |
-| DT Result B – The Switchboard | You're a Switchboard | Desk Load NN of 40. Here's the one move. |
-| DT Result C – The Builder | You're a Builder | Desk Load NN of 40. Here's the one move. |
-| DT Follow-up – Which one did you hand back | Which one did you hand back? | A quick follow-up on your Decision Tree Check. |
-| DT Follow-up – Which one did you hand back (Seed subscriber) | Which one did you hand back? | A quick follow-up on your Decision Tree Check. |
+Eleven pages, all under `/desk/`: `builder-on-track`, `builder-drifting`, `stretching-on-track`, `stretching-climbing`, `stretching-drifting`, `architect-on-track`, `architect-climbing`, `architect-drifting`, `team-on-track`, `team-climbing`, `team-drifting`. Copy in `copy/result-pages.md`. Build one from the sandbox page style, then duplicate ten times and swap headline, paragraph, tree image, One Move.
 
-Merge field for the heaviest branch: open the custom-values picker in the editor AFTER the quiz has had one test submission (Step 6), because the field doesn't exist until then. Insert it where the copy says `{{contact.the_decision_tree_check_highest_category_name}}`. Until then, leave the placeholder text in.
+Each page: Syncovate header · eyebrow "The Decision Tree Check" · H1 (the stage line) · `{{contact.first_name}}` intro · the tree illustration for that stage (three illustrations: Builder = full tree lit gold; Stretching = leaves fading, mid-tree gold; Architect = canopy quiet, trunk and roots gold; Shannon makes these in Claude Design or Canva from the prototype's layout) · green flag and red flag (merge `{{contact.dt_green_flag}}` / `{{contact.dt_red_flag}}`; if custom-field merge doesn't render on pages, the workflow redirects with `?g=…&r=…` URL params and a small page script shows them, or the flags live only in the email) · One Move · two buttons · credit line · footer. No nav to Services/About; this page has one job.
 
-## 4. The quiz (Sites → Quizzes → + New Quiz)
+Set every page to noindex.
 
-**Name:** The Decision Tree Check. (Door title "What landed on your desk last week?" goes on the intro page and the landing page; the quiz name stays "The Decision Tree Check" because it prefixes the custom fields.) Theme: cream background #FAF8F5, gold #BF8756 buttons, charcoal #252830 text. Fonts as close to Cormorant Garamond / DM Sans as the builder offers.
+## 5. The survey (Sites → Surveys → + New Survey)
 
-**Manage Categories:** create People, Customers, Money, Operations.
+**Name:** The Decision Tree Check. Theme: cream, gold button, Cormorant/DM Sans as available.
 
-**Page 1 (intro):** Text element with the Screen 1 copy from `design/quiz-spec.md`. Button: Start.
+**Slide 1 (door text):** "What landed on your desk last week?" + the two lines from the spec. Button: Let's see.
 
-**Pages 2–11 (one situation per page):**
-- Text element: the situation sentence.
-- Single Choice question, label: "Last time this happened, where did it land?" Required.
-- Five options, in this order, with scores 0, 1, 2, 3, 4:
-  1. Never heard about it. Somebody handled it.
-  2. Handled. Then they told me.
-  3. They checked with me first.
-  4. We hashed it out together.
-  5. Came to me. I made the call.
-- Assign every option on the page to the page's category (People / Customers / Money / Operations per the table in the spec). Do not use "Overall Only."
-- Tip: build page 2 fully, then duplicate the page nine times and change only the situation text and the category.
+**Slides 2–4 (People / Customers / Money and tools):** one Checkbox (multi-select) question per slide, label as in the spec ("Tap everything that came to you last week."), options = the items for that screen. Per-option points (if the builder scores checkbox options individually): Leaf +2, Branch +2, Limb +1. Map each option to its dt_item field (if the builder maps a checkbox question to a single field, map the whole question to a text field and let the workflow parse; see §7 alternative).
 
-Situations and categories (from `design/quiz-spec.md`):
-1. A customer calls to ask when their order will be ready. (Customers)
-2. Two people on a crew or shift want to swap days. (People)
-3. A tool breaks and needs replacing. A few hundred bucks, not a few thousand. (Money)
-4. A supplier says a delivery is going to be a day late. (Operations)
-5. Somebody asks for next Friday off. (People)
-6. A regular customer asks if you can squeeze in a rush job. (Customers)
-7. Somebody catches a quality problem before it goes out the door. (Operations)
-8. A crew needs to know which job to start first tomorrow. (People)
-9. A software renewal or a small recurring bill comes due. (Money)
-10. A new hire's first week needs a plan. (Operations)
+**Slide 5 (The big stuff):** five Radio questions, "Did this one come to you?" Yes/No. Points: Trunk items Yes 0 / No +2; Root items Yes 0 / No +3. Map each to its dt_item field.
 
-**Page 12 (opt-in):**
-- Text: "Your result's ready." + body copy from the spec.
-- First Name element, required. Email element, required.
-- Object Field: Company Size (dropdown).
-- Object Field: Seed Opt-in, label "Also send me the Saturday Seed, one leadership idea a week you can put into play Monday." Default No.
-- Text (small): No spam. Unsubscribe any time.
-- Submit button text: Show me.
+**Slide 6 (size and role):** text block with the "map looks different" line. Dropdown company size → dt_company_size, with points: Under 10 −10, 10–25 −4, 26–40 −2, 41–100 0, 100+ 0. Radio role → dt_role, with points: Owner 0, Leadership team −2, Manager −6, Family member −2.
 
-**Results template (Results → Edit Template):**
-- Header: Syncovate wordmark, title "Your Decision Tree Check."
-- Overall Score display ON, format "actual score", labeled "Desk Load" (out of 40).
-- Overall Score section: tiers as percentages. A: 0–30. B: 31–65. C: 66–100. Tier labels exactly "The Shade Tree", "The Switchboard", "The Builder" (these become the Overall Tier field values the workflow branches on, and the headline the taker sees). Tier message = the matching result copy from `copy/result-pages.md`.
-- Category Score breakdown: off (it would show four percentages and turn the result into a report card).
-- Individual Category section: display Highest. One short line per category, e.g. People: "Right now the heaviest branch is people: schedules, time off, who does what, disagreements." Same pattern for Customers, Money, Operations using the category wording in the spec.
-- CTA button on every tier: "Book 15 minutes with Dr. J" → https://link.syncovatellc.com/widget/bookings/book-a-15-min-clarity-call. Second link in the body text: "Send this to an owner you know" (mailto, see `copy/result-pages.md`).
-- Footer: syncovatellc.com, LinkedIn.
-- Settings → Custom Fields: turn ON sync for Overall Score, Overall Tier, Highest Category Name. Leave the rest off.
+**Slide 7 (opt-in):** "Your picture's ready." First Name (required), Email (required), Seed opt-in radio Yes/No default No → seed_optin. Submit: Show me.
 
-**On Submit setting:** Message (not Redirect), so the results page shows. Confirm in a test; this interaction is undocumented.
+**Scoring and redirect (Settings):** with the points above, the total approximates fit: strongly negative = roots drifting, around zero = on track, positive = weight climbing. Bands to start: ≤ −6 → drifting page; −5 to 5 → on-track page; ≥ 6 → climbing page. Redirect targets are role-and-stage-specific, so if the survey only supports score→URL, redirect to a single `/desk/result` page whose workflow-set custom fields drive the content, OR use three redirect bands and let the page merge the stage name. The cleanest version is: survey redirects by score band to `/desk/{state}`, and that page shows `{{contact.dt_stage}}` in its headline. Three pages instead of eleven. **Recommendation: start with three pages (on track / climbing / drifting) with the stage merged in, and expand to eleven only if the merge doesn't render.**
 
-**Save. Do not publish the page link anywhere yet.**
+Tune the points against the prototype using the test cases in §8 before publishing.
 
-## 5. Workflow
+## 6. The workflow ("Decision Tree Check – Results")
 
-Paste `taft/workflow-ai-prompt.md` into a new workflow's AI Build box, then do the hand checks listed at the bottom of that file. Leave it in draft.
+Trigger: Survey Submitted, survey = The Decision Tree Check.
+1. Add tag `decision-tree-check`.
+2. If/Else on dt_company_size → Update field dt_stage (Builder / Stretching / Architect) + stage tag.
+3. If/Else on dt_role → role tag.
+4. Math Operation steps: dt_leaf = count of Yes across the five leaf items (one Math step per item adding 1 if Yes; GHL's Math Operation adds to a number field), same for branch, limb, trunk, root.
+5. If/Else tree on role, stage and the five level counts → Update field dt_state, dt_green_flag, dt_red_flag using the sentences in `copy/result-pages.md` (flag lines). This is the longest part of the build; the AI builder prompt in `taft/workflow-ai-prompt.md` lays out the branches.
+6. Send Email: DT Result – Owner / Leadership team / Manager by role.
+7. Owner + state climb or drift → Internal Notification to Shannon (particular user) + Task "Send personal note within 24h" with the Email 3 draft.
+8. Wait 3 days → wait until Mon–Thu 8 AM → If seed_optin = Yes: send the Seed-subscriber follow-up + add the Seed source tag; else send the standard follow-up.
 
-## 6. First test submission (creates the result fields)
+## 7. Alternative if checkbox options can't map to individual fields
 
-Open the quiz's direct link (Integrate → link). Take it as a test contact (e.g. test+dt@syncovatellc.com) answering all "It came to me, and I decided" → expect tier C. Check the contact: three new fields should exist with values 40 / C / (highest category; with all-4s every category ties at 100%, so note what the builder picked). Now go back to the five email templates and insert the real merge field for Highest Category Name.
+Ask every item as its own Yes/No radio (18 short slides, or 4 slides of 4–6 radios). Slower by 20 seconds, perfectly mappable, and the "No" answers on big-stuff items carry points. If this is the case, use it everywhere for consistency.
 
-Then two more tests: all first answers (expect A, score 0) and a mix landing at 20 (expect B). Test a tie on purpose: answer 4 on both Customers questions and 4 on both Money questions, 0 elsewhere; note which category wins.
+## 8. Test cases (take the survey as test contacts; compare to the prototype)
 
-## 7. Page (Sites → Websites → the live Syncovate 2026 site)
+| Case | Size | Role | Taps | Expect |
+|------|------|------|------|--------|
+| Builder all on | Under 10 | Owner | everything Yes | Builder, on track |
+| Stretch everything | 26–40 | Owner | everything Yes | Stretching, climbing |
+| Stretch ideal | 26–40 | Owner | limb, trunk, root only | Stretching, on track |
+| Stretch out of the weeds | 26–40 | Owner | limb only | Stretching, drifting |
+| Architect ideal | 41–100 | Owner | trunk, root only | Architect, on track |
+| Architect everything | 100+ | Owner | everything | Architect, climbing |
+| Lead ideal | 26–40 | Leadership | branch, limb, trunk | Team, on track |
+| Lead buried | 26–40 | Leadership | leaf, branch | Team, climbing |
+| Mgr ideal | 41–100 | Manager | leaf, branch | Team (manager copy), on track |
 
-New page at `/desk` from the sandbox page style. Copy in `copy/landing-page.md`. Quiz embedded via Integrate → embed code pasted into a Custom HTML / Code element under the hero, or the hero button links to the quiz's direct link (simpler, and the quiz page is already mobile-friendly). Recommendation: button to the direct link first; embed later if the bounce is high.
+Delete test contacts after.
 
-Add `/desk` to the footer under Writing / Resources once it's live.
+## 9. Redirect and retire
 
-## 8. Redirect and retire the old tool
+- Redirect `spotter.syncovatellc.com/*` → `https://syncovatellc.com/desk` (API `create-redirect` or Sites → Redirects).
+- Unpublish workflow "Scotoma Spotter App" (4f1982ad-…, still published with a live inbound webhook). Rename both old workflows "OLD – DO NOT USE – …".
+- Old survey "Scotoma Spotter™" and site "Scotoma Spotter Pages": leave parked, or delete after launch.
+- GitHub: remove CNAME from `ssjennings1/scotoma-spotter`, archive the repo.
 
-- Taft: create redirect `spotter.syncovatellc.com/*` → `https://syncovatellc.com/desk` (API `create-redirect` works, or Sites → Redirects).
-- DNS: `spotter` currently CNAMEs to GitHub Pages. Repoint it to Taft per Taft's domain instructions, or drop the subdomain entirely and let the GitHub Pages site go dark (nothing links to it today).
-- GitHub: remove `CNAME` from `ssjennings1/scotoma-spotter` and archive the repo.
+## 10. Publish checklist
 
-## 9. Publish checklist
-
-- [ ] Workflow published, test contact got Email 1 within a minute and Email 2 three days later at 8 AM
-- [ ] Result C test triggered the internal notification to Shannon
-- [ ] Seed opt-in test contact got the Seed source tag and entered the Seed welcome sequence (and did NOT get the Seed paragraph in Email 2)
-- [ ] Test contacts deleted
-- [ ] Page live on phone and desktop, button works, result page shows the right tier and category
-- [ ] Redirect from spotter.syncovatellc.com works
+- [ ] All nine test cases land on the right page and the right email
+- [ ] Flags render (page or email)
+- [ ] Owner climbing/drifting test created the task and notification
+- [ ] Seed opt-in test entered the Seed welcome sequence
+- [ ] Phone check of every page
+- [ ] Old workflows renamed, Scotoma Spotter App unpublished
+- [ ] Redirect live

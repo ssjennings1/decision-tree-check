@@ -1,38 +1,48 @@
-# Workflow AI builder prompt — "Decision Tree Check – Results"
+# Workflow AI builder prompt — "Decision Tree Check – Results" (v2)
 
-Paste into the AI "Build" box on a new workflow canvas in Taft. Known quirks after it builds (from the Seed welcome build, Oct 24): it sets each Send Email subject to the template NAME instead of the template's subject line (fix by hand); it links templates with "Sync Edits to Template" on (good); it sets internal notifications to "Contact owner," which is empty for new contacts (switch to Particular user → Shannon Jennings). It never publishes on its own.
+Paste into the AI "Build" box on a new workflow canvas. Known quirks (from the Seed welcome build): it sets Send Email subjects to the template NAME (fix by hand); it links templates with "Sync Edits to Template" on (good); it sets internal notifications to "Contact owner" (switch to Particular user → Shannon Jennings). It never publishes on its own.
 
-Prerequisites before pasting: the five email templates exist in Email Builder → Templates with these exact names, and the tags exist (or will be created on save).
+Prerequisites: custom fields and tags from taft/build-spec.md §1–2 exist; the six email templates exist with the exact names in §3.
 
 ---
 
 Build a workflow named "Decision Tree Check – Results".
 
-Trigger: Quiz Submitted, filter Quiz is "The Decision Tree Check". (If the trigger is not available, use Contact Tag Added, tag "decision-tree-check".)
+Trigger: Survey Submitted, filter Survey is "The Decision Tree Check".
 
-Step 1: Add tag "decision-tree-check". Then If/Else on the custom field "The Decision Tree Check - Overall Tier" to add tag dt-result-a, dt-result-b or dt-result-c.
+Step 1: Add tag "decision-tree-check".
 
-Step 2: If/Else on contact tag:
-- Branch A: Overall Tier field is "The Shade Tree" (or tag "dt-result-a") → Send Email using template "DT Result A – The Shade Tree".
-- Branch B: Overall Tier field is "The Switchboard" (or tag "dt-result-b") → Send Email using template "DT Result B – The Switchboard".
-- Branch C: Overall Tier field is "The Builder" (or tag "dt-result-c") → Send Email using template "DT Result C – The Builder", then Internal Notification by email to a particular user, Shannon Jennings, subject "Builder result: {{contact.first_name}} {{contact.last_name}}", body with name, email, company size, heaviest branch; then Add Task assigned to Shannon Jennings, due in 1 day, title "Send personal note to {{contact.first_name}} (Builder)", description = the Email 3 draft text from copy/emails.md.
+Step 2: If/Else on custom field dt_company_size. "Under 10" → Update field dt_stage = "Builder" and Add tag dt-stage-builder. "10–25" or "26–40" → dt_stage = "Stretching", tag dt-stage-stretching. "41–100" or "100+" → dt_stage = "Architect", tag dt-stage-architect.
 
-Step 3 (all branches rejoin): Wait 3 days.
+Step 3: If/Else on dt_role → Add tag dt-role-owner / dt-role-lead / dt-role-mgr / dt-role-fam.
 
-Step 4: Wait until Monday through Thursday at 8:00 AM, contact's timezone if available, otherwise America/New_York.
+Step 4: Math Operation steps. For each of dt_item_01 … dt_item_18, if the field is "Yes", add 1 to the matching level counter: leaf items (01, 02, 07, 11, 13) → dt_leaf; branch items (03, 04, 08, 12, 15) → dt_branch; limb items (05, 06, 09) → dt_limb; trunk items (10, 14) → dt_trunk; root items (16, 17, 18) → dt_root.
 
-Step 5: If/Else on contact tag "seed-optin":
-- Has tag → Send Email using template "DT Follow-up – Which one did you hand back (Seed subscriber)". Then Add tag with the Saturday Seed source tag so the Seed welcome sequence starts.
-- Does not have tag → Send Email using template "DT Follow-up – Which one did you hand back".
+Step 5: Decide dt_state and the flags. Use these rules (climbing = items landing from levels that belong lower; drifting = items missing from levels that belong on this desk):
+- Owner + Builder: nothing counts as climbing. drifting = (2 − dt_trunk) + (3 − dt_root) + (3 − dt_limb). If drifting ≥ 2 → dt_state "drift", else "ok".
+- Owner + Stretching: climbing = dt_leaf. drifting = (3 − dt_limb) + (2 − dt_trunk) + (3 − dt_root). If climbing ≥ 2 and climbing ≥ drifting → "climb"; else if drifting ≥ 2 → "drift"; else "ok".
+- Owner + Architect: climbing = dt_leaf + dt_branch. drifting = (2 − dt_trunk) + (3 − dt_root). Same decision rule.
+- Leadership team or Family member: climbing = dt_leaf. drifting = (5 − dt_branch) + (3 − dt_limb) + (2 − dt_trunk). Same rule.
+- Manager: climbing = 0. drifting = (5 − dt_leaf) + (5 − dt_branch). Same rule.
+Then Add tag dt-state-ok / dt-state-climb / dt-state-drift.
+Green flag: for owners at Stretching or Architect, if dt_leaf = 0 set dt_green_flag to the Leaf green line; else if dt_branch = 0 (Architect only) the Branch green line; else the Root green line if dt_root = 3, else the Trunk green line. For Builder owners: Root green line if dt_root = 3, else Trunk, else Limb. For team seats: Leaf green line if dt_leaf = 0, else Branch green line. For managers: Leaf green line.
+Red flag: if dt_state = "drift", the drifting line for the level with the most missing items (check Root, then Trunk, then Limb, then Branch). Else if climbing > 0, the holding line for the level with the most landed items among the levels that belong lower (Leaf, then Branch, then Limb). Else if drifting > 0, the drifting line for the most-missing level. Else "Nothing jumped out. Take it again in six months and see what moved." The flag sentences are in copy/result-pages.md under "Flag lines".
 
-Settings: allow re-entry no; stop on response no (replies go to the inbox as normal). Do not publish.
+Step 6: If/Else on dt_role: Owner → Send Email using template "DT Result – Owner". Leadership team or Family member → "DT Result – Leadership team". Manager → "DT Result – Manager".
+
+Step 7: If dt_role is Owner AND dt_state is "climb" or "drift": Internal Notification by email to a particular user, Shannon Jennings, subject "Desk check: {{contact.first_name}} {{contact.last_name}} ({{contact.dt_stage}}, {{contact.dt_state}})", body with name, email, size, stage, state, red flag, seed opt-in. Then Add Task assigned to Shannon Jennings, due in 1 day, title "Send personal note to {{contact.first_name}}", description = the Email 3 draft in copy/emails.md.
+
+Step 8: Wait 3 days. Wait until Monday–Thursday 8:00 AM America/New_York.
+
+Step 9: If/Else on seed_optin: Yes → Send Email "DT Follow-up – Which one did you hand back (Seed subscriber)", then Add tag [Saturday Seed source tag]. No → Send Email "DT Follow-up – Which one did you hand back".
+
+Settings: allow re-entry yes (people retake it); stop on response no. Do not publish.
 
 ---
 
-## After it builds, check these by hand
-
-1. Each Send Email step: Subject line matches the template's subject, not the template name.
-2. Internal notification: To User Type = Particular user → Shannon Jennings.
-3. The Seed source tag in Step 5 is the exact tag the "Saturday Seed – Welcome Sequence" workflow (id 2da7a557-83f4-4600-9bfd-1616172f77f9) triggers on. Confirm the tag name in that workflow's trigger before saving.
-4. Orange dots on Add Tag nodes mean the tag doesn't exist yet; saving the action creates it.
-5. Test with a real quiz submission from a test contact, not "Test Workflow" mode (it sends stale bodies and blank merge tokens).
+## Hand checks after it builds
+1. Subjects match the templates, not the template names.
+2. Internal notification → Particular user → Shannon Jennings.
+3. The Seed source tag matches the "Saturday Seed – Welcome Sequence" trigger exactly.
+4. Math Operation steps add to a Number field; confirm the fields were created as Number, not Text.
+5. Run the nine test cases in build-spec.md §8 with real submissions, not Test Workflow mode.

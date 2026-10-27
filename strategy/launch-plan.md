@@ -29,7 +29,7 @@ Why that order (from `research/`): 55–80% of clients like Shannon's come from 
 | Start → finish | above 60% | below 50% | Interact 2026, service providers 47%, overall 65% |
 | Start → opt-in | 35–45% | below 25% | Interact 2026 (vendor; plan on half) |
 | Seed opt-in among finishers | 25%+ | below 10% | No benchmark; Claude's guess |
-| Builder results → reply to the personal note | 30%+ | below 10% | Josh Spector: ~40% reply to a welcome email that asks a question |
+| Owner climbing/drifting results → reply to the personal note | 30%+ | below 10% | Josh Spector: ~40% reply to a welcome email that asks a question |
 | Opt-in → 15-min call within 30 days | 5–10% | below 2% | No benchmark; Claude's guess |
 | Partner forwards (asked partner → at least one forward) | 1 in 3 | 1 in 8 | Hinge: most referrers never asked |
 
@@ -37,7 +37,7 @@ Taft gives start/finish/opt-in from quiz stats and tags. Calls come from the Cla
 
 ## Kill criteria
 
-If after six weeks start → finish is under 50% AND opt-in is under 25%, the quiz is the problem, not the traffic. Cut to seven questions, rewrite the ones with the most drop-off, relaunch to the list only. If completion is fine but opt-in is low, the opt-in page copy is the problem. If both are fine and calls are zero, the result-page CTA is the problem; try a per-tier CTA (Shade Tree → Seed only; Switchboard → call; Builder → personal note first, call second).
+If after six weeks start → finish is under 50% AND opt-in is under 25%, the quiz is the problem, not the traffic. Cut to seven questions, rewrite the ones with the most drop-off, relaunch to the list only. If completion is fine but opt-in is low, the opt-in page copy is the problem. If both are fine and calls are zero, the result-page CTA is the problem; try a per-state CTA (on track → Seed only; climbing → call; drifting → personal note first, call second).
 
 ## Version two (only if version one earns it)
 

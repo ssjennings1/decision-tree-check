@@ -4,6 +4,40 @@ Newest first. Same shape every time: what I did, what I decided on my own, what 
 
 ---
 
+## 2026-10-27 (evening) — Session 3: design v2 and the old build
+
+This one came out of you thinking out loud, so the design is yours; I built it.
+
+**What changed and why**
+- The ten-question, five-answer quiz is gone. In its place: eighteen things that happen in every company, across all five levels of the tree, and you tap what landed on your desk. The big-stuff items are yes/no so a "no" can count.
+- Size and role are asked last, with your line about the map looking different at five people than at twenty-five.
+- The score is fit, not volume. A Builder at eight people with everything on the desk is on track. The same desk at sixty is the finding.
+- Three stages: Builder, Stretching, Architect. Three fit states: on track, weight climbing, roots drifting. One green flag and one red flag, personalized. One Move for Monday. Team members, managers and family members get their own read, so the owner can send it to the team and compare trees.
+- Mechanism: Taft survey with scored redirect to designed pages, plus a workflow. That's what your contractor built; we keep the mechanism and none of the content. The Quiz Builder is out because its results page can't react to role or size; the custom-page webhook route is in reserve.
+
+**What I built**
+- `design/quiz-spec.md` v2: the items, the expected-desk matrix (role × stage), the fit rules, the flag logic.
+- `copy/result-pages.md` v2: eight owner pages, three team pages, manager and family variants, and the ten flag sentences.
+- `copy/emails.md`, `copy/landing-page.md`, `strategy/launch-kit.md`: updated to the new stages and the picture framing.
+- `taft/build-spec.md` v2 and `taft/workflow-ai-prompt.md` v2: survey, pages, fields, tags, the workflow's math and branches, nine test cases.
+- `prototype/index.html` v2, published: the whole flow with the tree drawn from your answers. It's the reference implementation; the Taft points get tuned to agree with it.
+- `research/old-scotoma-spotter-in-taft.md`: what the contractor built, what we keep (mechanism, size and role, "Builder"), what we drop, what to retire.
+
+**What I decided on my own**
+- Size thresholds for the stages: under 10, 10–40, 41+. Guesses; the copy says gut check.
+- Start with three result pages (by state) with the stage merged in, and only build eleven if the page merge doesn't render.
+- Kept the no-negging rule at the level of every flag sentence; a red flag names the situation, never the person.
+
+**What I need from you**
+- Take the prototype three times: as an owner at 8 people with everything on your desk, as an owner at 30 who's handed off the small stuff, and as a crew lead. Tell me where the picture or the words are wrong.
+- Ten minutes in Taft: open the old survey's settings and confirm the survey builder scores per answer and redirects by score. That decides whether the build is as clean as the spec says.
+
+**Still not done**
+- Nothing in Taft. Stage 3 by API is ready. Stage 4 needs you present.
+- The three stage illustrations (Builder / Stretching / Architect trees) don't exist yet. Your call whether that's Claude Design, Canva, or an illustrator.
+
+---
+
 ## 2026-10-27 (afternoon) — Session 2: the experimental run
 
 Shannon's brief: make every call, nothing goes live, deliver a fully functioning, ready-to-launch tool and strategy. Fun, interactive, useful, a gut check not a scientific tool.

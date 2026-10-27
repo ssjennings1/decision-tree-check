@@ -2,124 +2,110 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: one centered column, one card per screen, quiz-app pacing. Syncovate palette. */
+/* Layout: one centered column, one card per screen. The result draws the tree as five rows (root at the bottom). Syncovate palette. */
 :root{
   --bg:#FAF8F5; --surface:#FFFFFF; --muted:#F0EDE8; --fg:#252830; --fg2:#5B5F68; --line:#E2DCD3;
-  --gold:#BF8756; --gold-ink:#FFFFFF; --teal:#56ADBF;
+  --gold:#BF8756; --gold-ink:#FFFFFF; --teal:#56ADBF; --green:#5E9E6B; --unlit:#E6E1D8;
   --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
   --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#1C1E24; --surface:#252830; --muted:#2E313A; --fg:#F3EFE8; --fg2:#B8B3AA; --line:#3B3F49; --gold:#D4A070; --gold-ink:#1C1E24; --teal:#6FBFCF; color-scheme:dark } }
-:root[data-theme="dark"]{ --bg:#1C1E24; --surface:#252830; --muted:#2E313A; --fg:#F3EFE8; --fg2:#B8B3AA; --line:#3B3F49; --gold:#D4A070; --gold-ink:#1C1E24; --teal:#6FBFCF; color-scheme:dark }
-
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#1C1E24; --surface:#252830; --muted:#2E313A; --fg:#F3EFE8; --fg2:#B8B3AA; --line:#3B3F49; --gold:#D4A070; --gold-ink:#1C1E24; --teal:#6FBFCF; --green:#7FBF8C; --unlit:#3B3F49; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#1C1E24; --surface:#252830; --muted:#2E313A; --fg:#F3EFE8; --fg2:#B8B3AA; --line:#3B3F49; --gold:#D4A070; --gold-ink:#1C1E24; --teal:#6FBFCF; --green:#7FBF8C; --unlit:#3B3F49; color-scheme:dark }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
 .wrap{max-width:560px;margin:0 auto;display:grid;gap:20px}
 .brand{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg2)}
-.brand b{color:var(--fg);font-weight:600}
-.brand .proto{color:var(--teal)}
+.brand b{color:var(--fg);font-weight:600}.brand .proto{color:var(--teal)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px 24px;display:grid;gap:18px}
 h1,h2{font-family:var(--display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance}
-h1{font-size:40px}
-h2{font-size:30px}
-p{margin:0;color:var(--fg)}
-.small{font-size:14px;color:var(--fg2)}
+h1{font-size:40px}h2{font-size:30px}
+p{margin:0}.small{font-size:14px;color:var(--fg2)}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.btn{appearance:none;border:0;border-radius:999px;padding:14px 22px;font:600 16px var(--body);cursor:pointer;background:var(--gold);color:var(--gold-ink);justify-self:start}
-.btn:focus-visible,.opt:focus-visible,.ghost:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.btn{appearance:none;border:0;border-radius:999px;padding:14px 22px;font:600 16px var(--body);cursor:pointer;background:var(--gold);color:var(--gold-ink);justify-self:start;text-decoration:none;display:inline-block}
 .btn.wide{justify-self:stretch;text-align:center}
 .ghost{background:transparent;border:1.5px solid var(--line);color:var(--fg);border-radius:999px;padding:12px 20px;font:500 15px var(--body);cursor:pointer;text-decoration:none;text-align:center}
-.row{display:flex;gap:12px;flex-wrap:wrap}
-.row>*{flex:1 1 200px;min-width:0}
-
-/* progress */
-.prog{display:flex;align-items:center;gap:12px}
-.prog .bar{flex:1;height:4px;background:var(--muted);border-radius:2px;overflow:hidden}
-.prog .bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .25s}
-.prog span{font-size:13px;color:var(--fg2);font-variant-numeric:tabular-nums;white-space:nowrap}
-
-/* question */
-.situation{font-family:var(--display);font-size:28px;line-height:1.15;font-weight:500}
-.stem{font-weight:600;font-size:15px;color:var(--fg2)}
-.opts{display:grid;gap:10px}
-.opt{text-align:left;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font:500 16px/1.35 var(--body);color:var(--fg);cursor:pointer;transition:border-color .15s,transform .1s}
-.opt:hover{border-color:var(--gold)}
-.opt:active{transform:scale(.99)}
-.opt.picked{border-color:var(--gold);background:var(--muted)}
+.btn:focus-visible,.ghost:focus-visible,.chip:focus-visible,.pill:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>*{flex:1 1 200px;min-width:0}
+.prog{display:flex;align-items:center;gap:12px}.prog .bar{flex:1;height:4px;background:var(--muted);border-radius:2px;overflow:hidden}.prog .bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .25s}.prog span{font-size:13px;color:var(--fg2);white-space:nowrap}
+.chips{display:grid;gap:10px}
+.chip{text-align:left;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;font:500 16px/1.35 var(--body);color:var(--fg);cursor:pointer;display:flex;gap:12px;align-items:center;transition:border-color .15s}
+.chip:hover{border-color:var(--gold)}
+.chip .box{width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex:none;display:grid;place-items:center;font-size:14px;color:var(--gold-ink)}
+.chip.on{border-color:var(--gold);background:var(--muted)}.chip.on .box{background:var(--gold);border-color:var(--gold)}
+.yn{display:flex;gap:8px;flex:none}
+.pill{border:1.5px solid var(--line);border-radius:999px;padding:6px 12px;font:500 14px var(--body);background:transparent;color:var(--fg);cursor:pointer}
+.pill.on{border-color:var(--gold);background:var(--muted)}
+.ynrow{display:flex;gap:12px;align-items:center;justify-content:space-between;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;font:500 16px/1.35 var(--body)}
 .back{background:none;border:0;color:var(--fg2);font:500 14px var(--body);cursor:pointer;padding:0;justify-self:start}
-
-/* form */
 label{display:grid;gap:6px;font-size:14px;color:var(--fg2);font-weight:500}
 input,select{font:400 16px var(--body);padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);width:100%}
 input:focus,select:focus{outline:2px solid var(--teal);border-color:transparent}
-.yn{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.yn .pill{display:inline-flex;gap:6px;align-items:center;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:15px;color:var(--fg)}
-.yn input{width:auto;margin:0}
-.yn .pill:has(input:checked){border-color:var(--gold);background:var(--muted)}
-
-/* result */
-.score{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.score .n{font-family:var(--display);font-size:64px;line-height:1;font-weight:600;color:var(--gold);font-variant-numeric:tabular-nums}
-.score .of{font-size:15px;color:var(--fg2)}
-.strip{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;align-items:end;height:72px;margin-top:4px}
-.strip i{display:block;background:var(--line);border-radius:4px 4px 2px 2px;min-height:6px}
-.strip i.l4{background:var(--gold)}
-.strip i.l3{background:color-mix(in srgb,var(--gold) 70%,var(--line))}
-.strip i.l2{background:color-mix(in srgb,var(--gold) 45%,var(--line))}
-.strip i.l1{background:color-mix(in srgb,var(--gold) 22%,var(--line))}
-.legend{display:flex;justify-content:space-between;font-size:12px;color:var(--fg2)}
-.branch{background:var(--muted);border-radius:10px;padding:12px 14px;font-size:15px}
-.move{border-left:3px solid var(--teal);padding-left:14px}
-.move b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.seed{display:flex;gap:10px;flex-wrap:wrap}.seed .pill{padding:8px 14px;font-size:15px}
+/* tree */
+.tree{display:grid;gap:8px;padding:6px 0}
+.lvl{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center}
+.lvl b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg2);font-weight:600;text-align:right}
+.lvl .dots{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dot{width:26px;height:26px;border-radius:50%;background:var(--unlit);border:2px solid transparent;position:relative}
+.dot.lit{background:var(--gold)}
+.dot.lit.ok{background:var(--green)}
+.dot.miss{border-color:var(--gold);border-style:dashed;background:transparent}
+.dot.off{opacity:.45}
+.lvl .tag{font-size:12px;color:var(--fg2);margin-left:4px}
+.trunkline{height:14px;width:6px;background:var(--line);margin:0 auto;border-radius:3px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--fg2)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:4px}
+.flag{border-left:3px solid var(--green);padding:4px 0 4px 14px;font-size:15px}
+.flag.red{border-color:var(--gold)}
+.flag b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+.flag b{color:var(--green)}.flag.red b{color:var(--gold)}
+.move{border-left:3px solid var(--teal);padding-left:14px}.move b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
 .foot{font-size:12px;color:var(--fg2);line-height:1.5}
-.tree{display:grid;gap:4px;font-size:14px}
-.tree div{display:grid;grid-template-columns:72px 1fr;gap:10px}
-.tree div b{color:var(--gold)}
-.mail{display:grid;gap:8px}
-.mail textarea{font:400 14px/1.4 var(--body);padding:10px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);width:100%;min-height:92px;resize:vertical}
-@media (prefers-reduced-motion:reduce){ .prog .bar i,.opt{transition:none} }
-@media (max-width:420px){ h1{font-size:34px} .situation{font-size:24px} .score .n{font-size:54px} }
+.mail{display:grid;gap:8px}.mail textarea{font:400 14px/1.4 var(--body);padding:10px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);width:100%;min-height:80px;resize:vertical}
+details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{display:grid;grid-template-columns:72px 1fr;gap:10px}.tbl b{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.prog .bar i,.chip{transition:none}}
+@media (max-width:420px){h1{font-size:34px}h2{font-size:26px}.lvl{grid-template-columns:52px 1fr}}
 </style>
 
 <div class="wrap">
-  <div class="brand"><b>Syncovate</b><span>Business + Psychology</span><span class="proto">Prototype</span></div>
+  <div class="brand"><b>Syncovate</b><span>Business + Psychology</span><span class="proto">Prototype v2</span></div>
 
-  <!-- DOOR -->
   <section class="card" id="door">
-    <span class="eyebrow">A two-minute gut check for owners</span>
+    <span class="eyebrow">A two-minute gut check for leaders</span>
     <h1>What landed on your desk last week?</h1>
-    <p>Ten things that happen in every company. Pick where each one landed the last time it happened. No wrong answers, no grade.</p>
-    <p class="small">You'll get your Desk Load, the one branch carrying the most, and one thing to hand back Monday so your desk has room for what only you can do.</p>
+    <p>Eighteen things that happen in every company. Tap the ones that came to you. No wrong answers, no grade.</p>
+    <p class="small">You'll get a picture of your tree, whether it fits your stage, and one thing to try Monday.</p>
     <button class="btn" id="start">Let's see &nbsp;·&nbsp; about 2 minutes</button>
   </section>
 
-  <!-- QUESTION -->
   <section class="card" id="q" hidden>
-    <div class="prog"><div class="bar"><i id="fill"></i></div><span id="count">1 of 10</span></div>
-    <div class="situation" id="sit"></div>
-    <div class="stem">Last time this happened, where did it land?</div>
-    <div class="opts" id="opts"></div>
-    <button class="back" id="back">← Back</button>
+    <div class="prog"><div class="bar"><i id="fill"></i></div><span id="count"></span></div>
+    <h2 id="stitle"></h2>
+    <p class="small" id="ssub"></p>
+    <div class="chips" id="chips"></div>
+    <div class="row"><button class="back" id="back">← Back</button><button class="btn" id="next" style="justify-self:end">Next</button></div>
   </section>
 
-  <!-- OPT-IN -->
+  <section class="card" id="who" hidden>
+    <h2>One more, and it matters.</h2>
+    <p>The map looks different at five people than at twenty-five, and different again at seventy-five. Everything running through you is the right answer at one of those sizes.</p>
+    <label>How many people work here?
+      <select id="size"><option value="b">Under 10</option><option value="s" selected>10–25</option><option value="s2">26–40</option><option value="a">41–100</option><option value="a2">100+</option></select></label>
+    <label>What's your seat?
+      <select id="role"><option value="owner" selected>Owner / CEO / President</option><option value="lead">On the leadership team</option><option value="mgr">Manager or crew lead</option><option value="fam">Family member in the business</option></select></label>
+    <div class="row"><button class="back" id="back2">← Back</button><button class="btn" id="toOptin" style="justify-self:end">Almost there</button></div>
+  </section>
+
   <section class="card" id="optin" hidden>
-    <h2>Your result's ready.</h2>
+    <h2>Your picture's ready.</h2>
     <p>Where should I send the copy? You'll see it on the next screen too.</p>
     <form id="form" novalidate>
       <div class="row">
         <label>First name <input id="fn" type="text" autocomplete="given-name" placeholder="Shannon"></label>
         <label>Email <input id="em" type="email" autocomplete="email" placeholder="you@company.com"></label>
       </div>
-      <label style="margin-top:12px">How many people work in your company?
-        <select id="size"><option>Under 10</option><option selected>10–25</option><option>26–75</option><option>76–200</option><option>200+</option></select>
-      </label>
       <div style="margin-top:14px" class="small">Also send me the Saturday Seed. One leadership idea a week, two minutes to read, built for Monday.</div>
-      <div class="yn" style="margin-top:8px">
-        <label class="pill"><input type="radio" name="seed" value="yes" id="seedy"> Yes please</label>
-        <label class="pill"><input type="radio" name="seed" value="no" id="seedn" checked> Not right now</label>
-      </div>
+      <div class="seed" style="margin-top:8px"><button type="button" class="pill" id="seedy">Yes please</button><button type="button" class="pill on" id="seedn">Not right now</button></div>
       <div style="margin-top:18px;display:grid;gap:8px">
         <button class="btn wide" type="submit">Show me</button>
         <span class="small">No spam. Unsubscribe any time. (Prototype: nothing is sent or stored.)</span>
@@ -127,117 +113,145 @@ input:focus,select:focus{outline:2px solid var(--teal);border-color:transparent}
     </form>
   </section>
 
-  <!-- RESULT -->
   <section class="card" id="res" hidden>
     <span class="eyebrow">The Decision Tree Check</span>
-    <h2 id="rname"></h2>
-    <div class="score"><span class="n" id="rscore"></span><span class="of">Desk Load, out of 40</span></div>
+    <h2 id="rhead"></h2>
+    <p id="rintro"></p>
     <div>
-      <div class="strip" id="strip"></div>
-      <div class="legend"><span>Q1</span><span>where each one landed · taller = closer to you</span><span>Q10</span></div>
+      <div class="tree" id="tree"></div>
+      <div class="legend"><span><i style="background:var(--green)"></i>landed, belongs here</span><span><i style="background:var(--gold)"></i>landed, could live lower</span><span><i style="border:2px dashed var(--gold);background:transparent"></i>didn't reach you, should have</span><span><i style="background:var(--unlit)"></i>handled elsewhere</span></div>
     </div>
-    <div class="branch" id="rbranch"></div>
-    <div id="rbody" style="display:grid;gap:12px"></div>
+    <div class="flag" id="gflag"><b>Green flag</b><span></span></div>
+    <div class="flag red" id="rflag"><b>Red flag</b><span></span></div>
     <div class="move"><b>One Move for Monday</b><p id="rmove"></p></div>
+    <p id="rclose" class="small"></p>
     <div class="row">
       <a class="btn wide" href="https://link.syncovatellc.com/widget/bookings/book-a-15-min-clarity-call" target="_blank" rel="noopener">Book 15 minutes with Dr. J</a>
-      <button class="ghost" id="share">Send this to an owner you know</button>
+      <button class="ghost" id="share">Send this to someone whose desk you're curious about</button>
     </div>
-    <div class="mail" id="mailbox" hidden>
-      <span class="small">Copy and paste into a text or email:</span>
-      <textarea id="mailtext" readonly></textarea>
-      <button class="ghost" id="copy">Copy</button>
-    </div>
-    <details>
-      <summary class="small" style="cursor:pointer">The five levels, in case you want them for your team</summary>
-      <div class="tree" style="margin-top:10px">
-        <div><b>Leaf</b><span>You decide. No need to tell me.</span></div>
-        <div><b>Branch</b><span>You decide, then tell me.</span></div>
-        <div><b>Limb</b><span>You decide, but talk to me before you act.</span></div>
-        <div><b>Trunk</b><span>We decide together.</span></div>
-        <div><b>Root</b><span>I decide, with input from the people who'll live with it.</span></div>
-      </div>
-    </details>
+    <div class="mail" id="mailbox" hidden><span class="small">Copy and paste into a text or email:</span><textarea id="mailtext" readonly></textarea><button class="ghost" id="copy">Copy</button></div>
+    <details><summary class="small" style="cursor:pointer">The five levels, for your team</summary>
+      <div class="tbl"><div><b>Leaf</b><span>You decide. No need to tell me.</span></div><div><b>Branch</b><span>You decide, then tell me.</span></div><div><b>Limb</b><span>You decide, but talk to me before you act.</span></div><div><b>Trunk</b><span>We decide together.</span></div><div><b>Root</b><span>I decide, with input from the people who'll live with it.</span></div></div></details>
     <p class="foot">The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in Dr. J's hands since. This is a gut check, not a diagnosis.</p>
     <button class="back" id="again">Take it again</button>
   </section>
 </div>
 
 <script>
-const Q=[
- ["A customer calls to ask when their order will be ready.","Customers"],
- ["Two people on a crew or shift want to swap days.","People"],
- ["A tool breaks and needs replacing. A few hundred bucks, not a few thousand.","Money"],
- ["A supplier says the delivery is going to be a day late.","Operations"],
- ["Somebody asks for next Friday off.","People"],
- ["A regular customer asks if you can squeeze in a rush job.","Customers"],
- ["Somebody catches a quality problem before it goes out the door.","Operations"],
- ["A crew needs to know which job to start first tomorrow.","People"],
- ["A software renewal or a small recurring bill comes due.","Money"],
- ["A new hire's first week needs a plan.","Operations"]
+// ---- data ----
+const L=["Leaf","Branch","Limb","Trunk","Root"];
+const SCREENS=[
+ {t:"People",s:"Tap everything that came to you last week.",items:[
+  ["Somebody wanted next Friday off.",0],["Two people on a crew or shift wanted to swap days.",0],["A crew needed to know which job to start first tomorrow.",1],["Somebody asked how to handle a customer who was getting loud.",1],["A new hire's first week needed a plan.",2],["Somebody wanted to move into a different role.",2]]},
+ {t:"Customers",s:"Same deal. Tap what landed on you.",items:[
+  ["A customer called to ask when their order would be ready.",0],["A regular asked if we could squeeze in a rush job.",1],["A customer wanted a price exception.",2]]},
+ {t:"Money and tools",s:"Keep going. You're more than halfway.",items:[
+  ["A tool broke and needed replacing. A few hundred bucks.",0],["A supplier said the delivery would be a day late.",1],["A software renewal or a small recurring bill came due.",0],["Somebody caught a quality problem before it went out the door.",1]]},
+ {t:"The big stuff",s:"These are yes or no. Did this one come to you?",yn:true,items:[
+  ["A long-time customer asked for work we're not set up for yet.",3],["A piece of equipment that costs real money needed a yes or no.",3],["Your best person said they're thinking about leaving.",4],["A chance came up to add a service, a location, or a big new customer.",4],["Somebody asked what the company's going to look like in three years.",4]]}
 ];
-const A=["Never heard about it. Somebody handled it.","Handled. Then they told me.","They checked with me first.","We hashed it out together.","Came to me. I made the call."];
-const BRANCH={
- People:"The heaviest branch right now is <b>People</b>: schedules, time off, who does what.",
- Customers:"The heaviest branch right now is <b>Customers</b>: promises, rush jobs, “when will it be ready.”",
- Money:"The heaviest branch right now is <b>Money</b>: small purchases, bills, the stuff that isn’t really a money decision.",
- Operations:"The heaviest branch right now is <b>Operations</b>: suppliers, quality, what gets done when."
+const ITEMS=SCREENS.flatMap(s=>s.items);
+// expected desk: 1 = should land, 0 = should be handled elsewhere, 0.5 = either
+const EXP={
+ "owner:b":[1,1,1,1,1],"owner:s":[0,.5,1,1,1],"owner:a":[0,0,.5,1,1],
+ "lead":[0,1,1,1,0],"mgr":[1,1,.5,0,0],"fam":[0,1,1,1,0]};
+const STAGE={b:"Builder",s:"Stretching",a:"Architect"};
+const GREEN={0:"The small stuff mostly gets handled without you. That's the hardest habit to build and you've built it.",1:"Day-to-day calls get made and you hear about them after. That's trust, and your people can feel it.",2:"The judgment calls come to you for a conversation, not a rescue. That's the right altitude.",3:"The decisions that shape the company are still yours to make together. Good.",4:"The make-or-break calls land on your desk. That's exactly where they belong."};
+const RED_HOLD={0:"The small stuff still finds its way to you. Friday off, a broken tool, a swapped shift. None of it needs you, and all of it waits for you.",1:"The everyday calls still route through you before they happen. Your people have the judgment. They're not sure they have the permission.",2:"The judgment calls come to you to be decided, not discussed. One sentence changes that: what would you do?"};
+const RED_DRIFT={3:"Some of the decisions that shape the company are getting made without you in the room. That's worth a look this week.",4:"At least one make-or-break call didn't reach your desk. Those are the ones nobody else should be carrying alone.",2:"The judgment calls that should reach you mostly aren't. You're ready for more than you're getting.",1:"The everyday calls that should be yours are going over your head. Worth a conversation with whoever's above you."};
+const COPY={
+ "owner:b:ok":{h:"You're a Builder, and you're right where you should be.",i:"At your size, everything runs through you because you built it, and that's the right answer. The tree is small enough to see all of it, and your people know who to ask. Most owners at this stage feel like they should be delegating more. Not yet.",m:"Pick one person who brought you something this week they could have handled. Next time, ask: “What would you do?” Then let them. You're not handing off the decision yet. You're finding out who's ready for the next branch.",c:"The next stage puts new weight on the tree, and it's where owners get stuck. When you're close, I'm glad to talk."},
+ "owner:b:drift":{h:"You're a Builder, and some of the big calls are getting made without you.",i:"At your size the whole tree should be in your line of sight, and most of it is. But at least one decision that can make or break the company didn't reach your desk last week. That happens when an owner is heads-down in the work and the big stuff shows up quietly.",m:"Ask one question of your people: “What's the biggest thing you decided last week?” Then listen for the one that should have been yours.",c:"If you want help drawing the lines for who decides what, that's a conversation I'm glad to have."},
+ "owner:b:climb":{h:"You're a Builder, and you're right where you should be.",i:"At your size, everything runs through you because you built it, and that's the right answer.",m:"Pick one person who brought you something this week they could have handled. Next time, ask: “What would you do?” Then let them.",c:"The next stage puts new weight on the tree. When you're close, I'm glad to talk."},
+ "owner:s:ok":{h:"You're in the stretch, and you're doing it right.",i:"Ten to forty people is where the tree has to change shape. Doug Tatum calls it No Man's Land; I call it stretching, because that's what it feels like. The small stuff is supposed to stop reaching you here, and from your answers, it mostly has.",m:"Find the one leaf that still climbs. Hand it back with the rule out loud: “You decide. Tell me after.” Clarity is the gift.",c:"The stretch is where your people are ready for more than they're getting. If you want to draw the lines with the whole team in one room, that's the work I love."},
+ "owner:s:climb":{h:"You're in the stretch, and the weight is still climbing to you.",i:"Ten to forty people is where the tree has to change shape, and it's the hardest stretch in the life of a company. The small stuff is supposed to stop reaching you here. From your answers, a lot of it still does. That's not a flaw. It's what happens when a company grows faster than the lines get drawn, and your people keep bringing you things because you have the answer and they're not sure they're allowed to.",m:"Look at the last five things that landed on your desk. Pick the smallest one. Hand it back to the person it belongs to and say the rule out loud: “This is yours. Make the call and tell me after.” Then watch who steps up.",c:"If you'd rather draw the lines with your whole management team instead of one decision at a time, that's the kind of room I hold. Fifteen minutes is enough to see if it fits."},
+ "owner:s:drift":{h:"You're in the stretch, and some of the big calls are drifting.",i:"You've done the hard part: the small stuff isn't reaching you anymore. But at least one decision that should have come to you didn't. In the stretch that's common. The owner finally gets out of the weeds and the big calls start getting made by whoever's standing closest.",m:"Tell your leadership team which three kinds of decisions always come to you, in one sentence each. Most owners have never said it out loud.",c:"Drawing those lines with your team in the room is what I do. Fifteen minutes is enough to see if it fits."},
+ "owner:a:ok":{h:"You're an Architect, and the tree holds its own weight.",i:"At your size the small stuff shouldn't reach you, and from your answers it doesn't. Your desk holds the decisions that shape the company and the ones that can make or break it. That's the whole point of the tree, and most owners never get here.",m:"Ask your leadership team to take this check. Compare trees on Thursday. The gaps between what you think they decide and what they think they decide are where the next year gets won.",c:"When you want a second set of eyes on where the lines should move next, I'm glad to talk."},
+ "owner:a:climb":{h:"You're an Architect, and the small stuff is still finding you.",i:"At your size the leaves and branches should be handled long before they reach you. From your answers, some still do. Usually that's not about your people. It's about lines that were drawn for a smaller company and never redrawn.",m:"Pick the one small decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule. Then ask your leadership team why it got to you in the first place. That answer is the real finding.",c:"Redrawing the lines with your team in the room is the work I do. Fifteen minutes is enough to see if it fits."},
+ "owner:a:drift":{h:"You're an Architect, and the roots need you.",i:"The small stuff doesn't reach you, which is right. But at least one make-or-break decision didn't either, and at your size those are the ones only the owner should carry. This is the quiet version of being the last to know.",m:"Ask your leadership team one question: “What's the biggest thing we decided last month that I wasn't in the room for?” Say it with curiosity, not alarm.",c:"If you want help naming which decisions are always yours, that's a conversation I'm glad to have."},
+ "lead:ok":{h:"Your desk fits your seat.",i:"The everyday calls and the judgment calls land on you, the small stuff gets handled below you, and the make-or-break decisions go up. That's what a leadership-team desk is supposed to look like. It also means the owner trusts you with the middle of the tree, which is the part that holds everything else up.",m:"Send this to the owner and ask to compare trees. Where your picture and theirs disagree is where the lines need drawing.",c:""},
+ "lead:climb":{h:"Your desk is carrying more small stuff than your seat calls for.",i:"A lot of the leaves are landing on you. Either your people aren't clear they can decide, or you're the kind of leader people like to check with. Both are fixable, and both start with saying the rule out loud.",m:"Pick one decision that came to you this week that your people could have made. Hand it back: “You decide. Tell me after.”",c:""},
+ "lead:drift":{h:"Your desk is lighter than your seat.",i:"The judgment calls and the direction decisions that should be reaching you mostly aren't. Sometimes that's an owner who still holds the middle of the tree. Sometimes it's lines that were never drawn. Either way, you're ready for more than you're getting.",m:"Ask the owner one question: “Which decisions do you want me making without checking first?” Write down the answer.",c:""},
+ "mgr:ok":{h:"Your desk fits your seat.",i:"The small stuff and the day-to-day calls land on you, and the big ones go up. That's exactly the seat.",m:"Pick one call you made this week and tell whoever's above you how you made it. That's how the next branch gets handed to you.",c:""},
+ "mgr:climb":{h:"Your desk fits your seat.",i:"The small stuff and the day-to-day calls land on you, and the big ones go up. That's exactly the seat.",m:"Pick one call you made this week and tell whoever's above you how you made it. That's how the next branch gets handed to you.",c:""},
+ "mgr:drift":{h:"Your desk is lighter than your seat.",i:"A lot of the everyday calls that should be yours are going up over your head. That's worth a conversation with whoever's above you.",m:"Ask one question: “Which of these do you want me deciding without checking?”",c:""},
 };
-const R=[
- {max:12,name:"The Shade Tree",
-  body:["Most of the small stuff never reaches you, and the people handling it know when to loop you in. People work under your tree, not around it.","That didn’t happen by accident. Somewhere along the way you drew the lines, or your people figured them out and you let them. What it buys you: the decisions that do reach your desk are mostly the ones that should. Direction. Risk. The calls that shape everything else."],
-  move:"Find the one leaf that still climbs. Pick one decision in your heaviest branch this week and ask the person who brought it, “What would you do?” Then let them. That question is how people grow into the next branch.",
-  close:"The next stage of growth puts new weight on the tree. When you want a second set of eyes on where the lines should move, that’s a conversation I’m glad to have."},
- {max:26,name:"The Switchboard",
-  body:["A good share of the everyday calls still route through you, and a good share don’t. You’re the connection point. Everybody knows that if they plug into you, they’ll get an answer.","That’s how a company grows when the owner is good at the work. People bring you things because you have the answer, and because they’re not sure they’re allowed to decide. From your chair it looks like interruptions. From theirs it looks like respect, or caution. Either way, nobody’s quite sure where the lines are. The tree can’t carry more growth until some of that weight moves down, and your people can’t grow into the next branch until they know it’s theirs. What that frees your desk for: the next hire, the next customer, the next year."],
-  move:"Look at the last five things that landed on your desk. Pick one from your heaviest branch, hand it back to the person it belongs to, and give them the new rule: you decide, then tell me. Say it out loud. Clarity is the gift.",
-  close:"If you’d rather draw the lines with your whole management team instead of one decision at a time, that’s the kind of room I hold."},
- {max:40,name:"The Builder",
-  body:["Nearly everything on the list came to you, or waited for you. That’s because you built this. You were the answer to every question in the building, and that’s exactly how it grew.","It’s also why you can’t step away without things slowing down, and why you’re the last to hear about the things that matter. Nobody did this to you. It’s what happens when a company outgrows one person’s ability to see everything and nobody has drawn the lines yet. The good news: builders are good at drawing lines. You just haven’t pointed that at this yet. And the people bringing you things are ready for more than they’re getting. Every decision you keep is one they don’t get to grow on. Every one you hand back with a clear rule clears your desk for the work only you can do: where this company goes next."],
-  move:"Pick the one decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule attached: “This is yours. Make the call and tell me after.” Then do it again next week. Watch who steps up.",
-  close:"When you’re ready to draw the lines for the whole tree, with your people in the room, that’s the work I do. Fifteen minutes is enough to see if it fits."}
-];
+const FAM="In a family business, decisions sometimes land by last name instead of by seat. The question worth asking about your picture is whether what lands there is yours because of your role, or because of your family. Both can be true. Knowing which is which is where the clarity starts. ";
+
+// ---- state ----
 const $=id=>document.getElementById(id);
-let i=0, ans=Array(10).fill(null);
-const show=id=>{for(const s of ["door","q","optin","res"]) $(s).hidden=(s!==id); window.scrollTo({top:0,behavior:"smooth"});};
-
+let sc=0, on=Array(ITEMS.length).fill(false), seed=false;
+const show=id=>{for(const s of ["door","q","who","optin","res"]) $(s).hidden=(s!==id); window.scrollTo({top:0,behavior:"smooth"});};
+let base=0;
 function render(){
-  $("sit").textContent=Q[i][0];
-  $("count").textContent=(i+1)+" of 10";
-  $("fill").style.width=((i)/10*100)+"%";
-  const o=$("opts"); o.innerHTML="";
-  A.forEach((t,k)=>{const b=document.createElement("button");b.type="button";b.className="opt"+(ans[i]===k?" picked":"");b.textContent=t;
-    b.onclick=()=>{ans[i]=k; b.classList.add("picked"); setTimeout(()=>{ if(i<9){i++;render();} else {show("optin");} },160);};
-    o.appendChild(b);});
-  $("back").hidden=(i===0);
+  const s=SCREENS[sc]; base=SCREENS.slice(0,sc).reduce((a,x)=>a+x.items.length,0);
+  $("stitle").textContent=s.t; $("ssub").textContent=s.s;
+  $("count").textContent=(sc+1)+" of 4"; $("fill").style.width=(sc/4*100)+"%";
+  const c=$("chips"); c.innerHTML="";
+  s.items.forEach((it,k)=>{const i=base+k;
+    if(s.yn){const d=document.createElement("div");d.className="ynrow";d.innerHTML=`<span>${it[0]}</span>`;
+      const yn=document.createElement("div");yn.className="yn";
+      for(const [lab,v] of [["Yes",true],["No",false]]){const b=document.createElement("button");b.type="button";b.className="pill"+(on[i]===v?" on":"");b.textContent=lab;b.onclick=()=>{on[i]=v;render();};yn.appendChild(b);}
+      d.appendChild(yn);c.appendChild(d);
+    } else {const b=document.createElement("button");b.type="button";b.className="chip"+(on[i]?" on":"");b.innerHTML=`<span class="box">${on[i]?"✓":""}</span><span>${it[0]}</span>`;b.onclick=()=>{on[i]=!on[i];render();};c.appendChild(b);}
+  });
+  $("back").hidden=(sc===0); $("next").textContent=(sc===3?"Next":"Next");
 }
-$("start").onclick=()=>{i=0;render();show("q");};
-$("back").onclick=()=>{if(i>0){i--;render();}};
+$("start").onclick=()=>{sc=0;render();show("q");};
+$("back").onclick=()=>{if(sc>0){sc--;render();}};
+$("next").onclick=()=>{if(sc<3){sc++;render();} else show("who");};
+$("back2").onclick=()=>{sc=3;render();show("q");};
+$("toOptin").onclick=()=>show("optin");
+$("seedy").onclick=()=>{seed=true;$("seedy").classList.add("on");$("seedn").classList.remove("on");};
+$("seedn").onclick=()=>{seed=false;$("seedn").classList.add("on");$("seedy").classList.remove("on");};
 
+// ---- scoring: fit against the expected desk ----
+function compute(){
+  const sizeRaw=$("size").value, role=$("role").value;
+  const stage=sizeRaw.startsWith("b")?"b":sizeRaw.startsWith("s")?"s":"a";
+  const exp=role==="owner"?EXP["owner:"+stage]:EXP[role];
+  const lit=L.map(()=>[]); ITEMS.forEach((it,i)=>lit[it[1]].push(on[i]===true));
+  let climb=0,drift=0; const climbBy=[0,0,0,0,0], driftBy=[0,0,0,0,0];
+  lit.forEach((arr,l)=>{arr.forEach(v=>{ if(exp[l]===0&&v){climb++;climbBy[l]++;} if(exp[l]===1&&!v){drift++;driftBy[l]++;} });});
+  let state="ok"; if(climb>=2&&climb>=drift) state="climb"; else if(drift>=2&&drift>climb) state="drift";
+  // flags
+  let g=null,r=null;
+  const low=[0,1,2].filter(l=>exp[l]===0).sort((a,b)=>climbBy[a]-climbBy[b]);
+  if(low.length&&climbBy[low[0]]===0) g=GREEN[low[0]];
+  else { const high=[4,3,2,1].find(l=>exp[l]===1&&driftBy[l]===0&&lit[l].some(Boolean)); g=GREEN[high??4]; }
+  if(state==="drift"){ const l=[4,3,2,1].sort((a,b)=>driftBy[b]-driftBy[a])[0]; r=RED_DRIFT[l]; }
+  else if(climb>0){ const l=[0,1,2].sort((a,b)=>climbBy[b]-climbBy[a])[0]; r=RED_HOLD[l]; }
+  else if(drift>0){ const l=[4,3,2,1].sort((a,b)=>driftBy[b]-driftBy[a])[0]; r=RED_DRIFT[l]; }
+  else r="Nothing jumped out. Take it again in six months and see what moved.";
+  const key=(role==="owner"?"owner:"+stage:(role==="fam"?"lead":role))+":"+state;
+  return {stage,role,exp,lit,state,g,r,copy:COPY[key],climb,drift};
+}
+function drawTree(res){
+  const t=$("tree"); t.innerHTML="";
+  for(let l=4;l>=0;l--){ // root at bottom? no: draw leaf top → root bottom
+  }
+  for(let l=0;l<5;l++){ const d=document.createElement("div");d.className="lvl";
+    const dots=res.lit[l].map(v=>{const e=res.exp[l]; let cls="dot";
+      if(v) cls+=" lit"+(e===0?"":" ok"); else if(e===1) cls+=" miss"; else cls+=" off"; return `<span class="${cls}"></span>`;}).join("");
+    const e=res.exp[l]; const tag=e===1?"belongs on your desk":e===0?"belongs lower":"either way";
+    d.innerHTML=`<b>${L[l]}</b><div class="dots">${dots}<span class="tag">${tag}</span></div>`; t.appendChild(d);
+    if(l<4){const s=document.createElement("div");s.className="trunkline";t.appendChild(s);} }
+}
 function result(){
-  const total=ans.reduce((a,b)=>a+(b??0),0);
-  const cat={}; const catMax={};
-  Q.forEach((q,k)=>{cat[q[1]]=(cat[q[1]]||0)+(ans[k]??0); catMax[q[1]]=(catMax[q[1]]||0)+4;});
-  // highest category as % of its own max (mirrors Taft). Tie-break: later in this order wins only if strictly higher, so first listed wins ties.
-  let best=null,bp=-1; for(const c of ["People","Customers","Money","Operations"]){const p=cat[c]/catMax[c]; if(p>bp){bp=p;best=c;}}
-  const r=R.find(x=>total<=x.max);
-  $("rname").textContent=r.name;
-  $("rscore").textContent=total;
-  $("rbranch").innerHTML=BRANCH[best];
-  $("rbody").innerHTML=r.body.map(t=>"<p>"+t+"</p>").join("")+"<p>"+r.close+"</p>";
-  $("rmove").textContent=r.move;
-  const s=$("strip"); s.innerHTML="";
-  ans.forEach(v=>{const b=document.createElement("i");b.className="l"+v;b.style.height=(12+v*15)+"px";b.title=A[v];s.appendChild(b);});
-  $("mailtext").value="Two minutes, no grade. Ten things that happen in every company. Pick where each one landed last week. I got "+r.name+". syncovatellc.com/desk";
+  const res=compute(); const fn=$("fn").value.trim()||"there";
+  const stageName=res.role==="owner"?STAGE[res.stage]:(res.role==="mgr"?"crew lead":"leader");
+  $("rhead").textContent=res.copy.h;
+  $("rintro").textContent=(res.role==="fam"?FAM:"")+res.copy.i;
+  drawTree(res);
+  $("gflag").querySelector("span").textContent=res.g; $("rflag").querySelector("span").textContent=res.r;
+  $("rmove").textContent=res.copy.m; $("rclose").textContent=res.copy.c; $("rclose").hidden=!res.copy.c;
+  $("mailtext").value=`I'm a ${stageName}. Bet your desk looks different. Two minutes, no grade. syncovatellc.com/desk`;
   $("mailbox").hidden=true;
 }
-$("form").onsubmit=e=>{e.preventDefault();
-  const fn=$("fn"),em=$("em"); let ok=true;
+$("form").onsubmit=e=>{e.preventDefault(); const fn=$("fn"),em=$("em"); let ok=true;
   for(const f of [fn,em]){ if(!f.value.trim()||(f===em&&!/.+@.+\..+/.test(f.value))){f.style.borderColor="#C0392B";ok=false;} else f.style.borderColor=""; }
-  if(!ok) return;
-  result(); show("res");
-};
+  if(!ok) return; result(); show("res"); };
 $("share").onclick=()=>{$("mailbox").hidden=!$("mailbox").hidden;};
 $("copy").onclick=()=>{const t=$("mailtext"); navigator.clipboard?.writeText(t.value).then(()=>{$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy",1500);}).catch(()=>{t.select();});};
-$("again").onclick=()=>{ans=Array(10).fill(null);i=0;show("door");};
+$("again").onclick=()=>{on=Array(ITEMS.length).fill(false);sc=0;show("door");};
 </script>
