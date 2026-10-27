@@ -40,7 +40,7 @@ Hit reply and tell me what came up. I read every one.
 
 Dr. J
 
-P.S. You'll disagree with where I put some of these. Good. A new truck is a Tuesday for a fleet and a root decision for a shop that's never bought one. This picture uses broad strokes; the real one is the version you draw with your team. Send it to your leadership team and compare trees on Thursday. The places you disagree are where the lines need drawing.
+P.S. You'll disagree with where I put some of these. Where a decision sits depends on your company. Buying a truck is routine for a company that runs a fleet and a major decision for one that has never bought a truck. This picture uses broad strokes; the real one is the version you draw with your team. Send it to your leadership team and compare trees on Thursday. The places you disagree are where the lines need drawing.
 
 P.P.S. The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in my hands since.
 

@@ -130,7 +130,7 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
       <button class="ghost" id="share">Send this to someone whose desk you're curious about</button>
     </div>
     <div class="mail" id="mailbox" hidden><span class="small">Copy and paste into a text or email:</span><textarea id="mailtext" readonly></textarea><button class="ghost" id="copy">Copy</button></div>
-    <div class="branch" style="background:var(--muted);border-radius:10px;padding:12px 14px;font-size:15px"><b>You'll disagree with where I put some of these. Good.</b> Where a decision sits depends on your company. A new truck is a Tuesday for a fleet and a root decision for a shop that's never bought one. This picture uses broad strokes. The real one is the version you draw with your team, and the places you disagree are where the lines need drawing.</div>
+    <div class="branch" style="background:var(--muted);border-radius:10px;padding:12px 14px;font-size:15px"><b>You'll disagree with where I put some of these.</b> Where a decision sits depends on your company. Buying a truck is routine for a company that runs a fleet and a major decision for one that has never bought a truck. This picture uses broad strokes. The real one is the version you draw with your team, and the places you disagree are where the lines need drawing.</div>
     <details><summary class="small" style="cursor:pointer">The five levels, for your team</summary>
       <div class="tbl"><div><b>Leaf</b><span>You decide. No need to tell me.</span></div><div><b>Branch</b><span>You decide, then tell me.</span></div><div><b>Limb</b><span>You decide, but talk to me before you act.</span></div><div><b>Trunk</b><span>We decide together.</span></div><div><b>Root</b><span>Affects the whole company. May involve key stakeholders. The buck stops with the top leader.</span></div></div></details>
     <p class="foot">The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in Dr. J's hands since. This is a gut check, not a diagnosis.</p>
@@ -142,7 +142,7 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
 // ---- data ----
 const L=["Leaf","Branch","Limb","Trunk","Root"];
 const SCREENS=[
- {t:"People",s:"Tap every decision that landed on you last week. Answer for your company, not the textbook.",items:[
+ {t:"People",s:"Tap every decision that landed on you last week.",items:[
   ["Approve time off for next Friday.",0],["Approve two people swapping schedules.",0],["Decide who covers when somebody calls in sick.",1],["Decide which big project starts tomorrow and which one waits.",1],["Plan a new hire's first week.",2],["Decide whether somebody moves into a different role.",2]]},
  {t:"Customers",s:"Same deal. Tap the decisions that came to you.",items:[
   ["Tell a customer when their order or project will be ready.",0],["Handle a customer complaint.",1],["Decide what changes after the same complaint shows up for the third time.",2],["Decide whether a good customer gets an exception on price or terms.",2]]},
@@ -159,7 +159,7 @@ const EXP={
  "owner:b":[1,1,1,1,1],"owner:s":[0,.5,1,1,1],"owner:a":[0,0,.5,1,1],
  "lead":[0,1,1,1,0],"mgr":[1,1,.5,0,0],"fam":[0,1,1,1,0]};
 const STAGE={b:"Builder",s:"Stretching",a:"Architect"};
-const GREEN={0:"The small stuff mostly gets handled without you. That's the hardest habit to build and you've built it.",1:"Day-to-day calls get made and you hear about them after. That's trust, and your people can feel it.",2:"The judgment calls come to you for a conversation, not a rescue. That's the right altitude.",3:"The decisions that shape the company are still yours to make together. Good.",4:"The make-or-break calls land on your desk. That's exactly where they belong."};
+const GREEN={0:"The small stuff mostly gets handled without you. That's the hardest habit to build and you've built it.",1:"Day-to-day calls get made and you hear about them after. That's trust, and your people can feel it.",2:"The judgment calls come to you for a conversation, not a rescue. That's the right altitude.",3:"The decisions that shape the company are still being made together, with you in the room.",4:"The make-or-break calls land on your desk. That's exactly where they belong."};
 const RED_HOLD={0:"The small stuff still finds its way to you. Friday off, a broken printer, a swapped schedule. None of it needs you, and all of it waits for you.",1:"The everyday calls still route through you before they happen. Your people have the judgment. They're not sure they have the permission.",2:"The judgment calls come to you to be decided, not discussed. One sentence changes that: what would you do?"};
 const RED_DRIFT={3:"Some of the decisions that shape the company are getting made without you in the room. That's worth a look this week.",4:"At least one make-or-break call didn't reach your desk. Those are the ones nobody else should be carrying alone.",2:"The judgment calls that should reach you mostly aren't. You're ready for more than you're getting.",1:"The everyday calls that should be yours are going over your head. Worth a conversation with whoever's above you."};
 const COPY={

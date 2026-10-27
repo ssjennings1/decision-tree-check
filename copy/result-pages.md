@@ -8,7 +8,7 @@ Share line (all pages): *"I'm a {{stage}}. Bet your desk looks different. Two mi
 
 Disagreement block (all pages, above the credit; Shannon 2026-10-27):
 
-> **You'll disagree with where I put some of these. Good.** Where a decision sits depends on your company. A new truck is a Tuesday for a fleet and a root decision for a shop that's never bought one. This picture uses broad strokes. The real one is the version you draw with your team, and the places you disagree are where the lines need drawing.
+> **You'll disagree with where I put some of these.** Where a decision sits depends on your company. Buying a truck is routine for a company that runs a fleet and a major decision for one that has never bought a truck. This picture uses broad strokes. The real one is the version you draw with your team, and the places you disagree are where the lines need drawing.
 
 Credit (small type, all pages): *The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in Dr. J's hands since. This is a gut check, not a diagnosis.*
 
@@ -22,7 +22,7 @@ Green (what you let go of well, or carry well):
 - Leaf: "The small stuff mostly gets handled without you. That's the hardest habit to build and you've built it."
 - Branch: "Day-to-day calls get made and you hear about them after. That's trust, and your people can feel it."
 - Limb: "The judgment calls come to you for a conversation, not a rescue. That's the right altitude."
-- Trunk: "The decisions that shape the company are still yours to make together. Good."
+- Trunk: "The decisions that shape the company are still being made together, with you in the room."
 - Root: "The make-or-break calls land on your desk. That's exactly where they belong."
 
 Red (what you hold, or what's happening without you):

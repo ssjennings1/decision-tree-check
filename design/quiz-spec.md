@@ -53,7 +53,7 @@ Count by level: Leaf 5, Branch 5, Limb 4, Trunk 6, Root 8 (28 items). Root = aff
 
 ## Disagreement is the point
 
-Levels are company-specific. A truck purchase is a leaf for a fleet and a root for a three-truck shop. The items are written as clearly as possible with scale anchors ("a few hundred dollars, not a few thousand"), the first screen says "answer for your company, not the textbook," and every result page carries the disagreement block: you'll disagree with where I put some of these, good, the real tree is the one you draw with your team. (Shannon, 2026-10-27.)
+Levels are company-specific. A truck purchase is a leaf for a fleet and a root for a three-truck shop. The items are written as clearly as possible with scale anchors ("a few hundred dollars, not a few thousand"), and every result page carries the disagreement block: you'll disagree with where I put some of these, good, the real tree is the one you draw with your team. (Shannon, 2026-10-27.)
 
 ## Size and role (asked last)
 
