@@ -37,7 +37,7 @@ Send from Shannon's own inbox. Change the first paragraph for each person; the r
 
 {{First name}},
 
-[One personal line. Something you actually talked about last time, or a reverse referral: "I sent Dan from Mid City your way last month; let me know if he reached out."]
+[One personal line. Something you two talked about last time, or a reverse referral: "I sent Dan from Mid City your way last month; let me know if he reached out."]
 
 I built a quick gut check for owners and I think a few of your clients would get something out of it. Ten everyday situations, pick where each one landed last week, two minutes, no grade. It tells them how much of the small stuff is still climbing to their desk and gives them one decision to hand back.
 
