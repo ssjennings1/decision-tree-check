@@ -9,7 +9,7 @@
 ## The flow
 
 1. **Door.** One line, one button.
-2. **Tap what landed.** 25 everyday decisions, across all five levels, on five screens (People / Customers / Money and operations / The big stuff / The really big stuff). Tap every decision that landed on you last week. The two big-stuff screens ask each one as Yes/No so a "no" can carry weight.
+2. **Tap what landed.** 28 everyday decisions, across all five levels, on five screens (People / Customers / Money and operations / The big stuff / The really big stuff). Tap every decision that landed on you last week. The two big-stuff screens ask each one as Yes/No so a "no" can carry weight.
 3. **Size and role.** Asked last, with the line that explains why: *"The map looks different at five people than at twenty-five. Everything running through you is the right answer at one of those sizes."*
 4. **Opt-in.** First name, email, Seed yes/no (default no). Email required; it gates the result.
 5. **Result.** The tree, lit by what landed. Stage, fit, one green flag, one red flag, One Move for Monday, two buttons.
@@ -39,14 +39,17 @@ Every item is a decision, verb first (Shannon, 2026-10-27: "it's a decision tree
 | 17 | Decide what we offer for benefits. | Trunk | The big stuff |
 | 18 | Decide how people get reviewed, or whether they do. | Trunk | The big stuff |
 | 19 | Set this year's goals. | Trunk | The big stuff |
-| 20 | Decide what to do when your best person says they're thinking about leaving. | Root | The really big stuff |
-| 21 | Decide what's next now that we've outgrown our space. | Root | The really big stuff |
-| 22 | Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
-| 23 | Decide what the company looks like in five years. | Root | The really big stuff |
-| 24 | Decide how to respond to a competitor who keeps hiring our best people. | Root | The really big stuff |
-| 25 | Decide whether to make a move on a competitor that closed, is retiring, or is for sale. | Root | The really big stuff |
+| 20 | Decide what happens when sales promises something operations has to clean up. | Trunk | The big stuff |
+| 21 | Decide what the sales team's job is, because right now they're not sure. | Trunk | The big stuff |
+| 22 | Decide what to do when your best person says they're thinking about leaving. | Root | The really big stuff |
+| 23 | Decide what's next now that we've outgrown our space. | Root | The really big stuff |
+| 24 | Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
+| 25 | Decide what the company looks like in five years. | Root | The really big stuff |
+| 26 | Decide how to respond to a competitor who keeps hiring our best people. | Root | The really big stuff |
+| 27 | Decide whether to make a move on a competitor that closed, is retiring, or is for sale. | Root | The really big stuff |
+| 28 | Decide what happens after somebody was caught stealing from the company. | Root | The really big stuff |
 
-Count by level: Leaf 5, Branch 5, Limb 4, Trunk 5, Root 6 (25 items). The two big-stuff screens (items 15–25) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
+Count by level: Leaf 5, Branch 5, Limb 4, Trunk 7, Root 7 (28 items). The two big-stuff screens (items 15–28) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
 
 ## Size and role (asked last)
 

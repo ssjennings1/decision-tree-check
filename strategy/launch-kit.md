@@ -15,7 +15,7 @@ Sent as a one-off campaign, not a Seed. Plain personal look.
 
 I built something small and I want you to try it before anyone else does.
 
-Twenty-five decisions that come up in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the decisions that landed on you last week.
+Twenty-eight decisions that come up in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the decisions that landed on you last week.
 
 Two minutes. No wrong answers, no grade. At the end you get a picture of your tree, whether it fits the size of your company and the seat you're in, and one thing to try Monday. It works for your leadership team too. Compare trees.
 
@@ -39,11 +39,11 @@ Send from Shannon's own inbox. Change the first paragraph for each person; the r
 
 [One personal line. Something you two talked about last time, or a reverse referral: "I sent Dan from Mid City your way last month; let me know if he reached out."]
 
-I built a quick gut check for owners and I think a few of your clients would get something out of it. Twenty-five everyday decisions, tap the ones that landed on you last week, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
+I built a quick gut check for owners and I think a few of your clients would get something out of it. Twenty-eight everyday decisions, tap the ones that landed on you last week, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
 
 If an owner ever says to you "everything still runs through me," this is the thing to send them. Here's a paragraph you can forward as-is:
 
-> Shannon Jennings, who I've worked with, built a two-minute check for owners. Twenty-five decisions that come up in every company. You tap what landed on your desk last week and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
+> Shannon Jennings, who I've worked with, built a two-minute check for owners. Twenty-eight decisions that come up in every company. You tap what landed on your desk last week and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
 
 And if you'd like to try it yourself first, you'll know in two minutes whether it's worth passing on.
 

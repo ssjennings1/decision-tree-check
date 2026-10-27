@@ -8,7 +8,7 @@ One job: get a start. Headline question, one line of what you get, a button with
 
 **H1:** What landed on your desk last week?
 
-**Sub:** Twenty-five decisions that come up in every company. Tap the ones that landed on you. No wrong answers, no grade.
+**Sub:** Twenty-eight decisions that come up in every company. Tap the ones that landed on you. No wrong answers, no grade.
 
 **Button:** Let's see · about 2 minutes
 
@@ -17,7 +17,7 @@ One job: get a start. Headline question, one line of what you get, a button with
 ---
 
 **Strip (three short items, no icons needed):**
-- 25 decisions you'll recognize
+- 28 decisions you'll recognize
 - A picture of your tree you can send to your team
 - One move for Monday
 
