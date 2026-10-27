@@ -40,7 +40,9 @@ Hit reply and tell me what came up. I read every one.
 
 Dr. J
 
-P.S. The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in my hands since. And this was a gut check, not a diagnosis. Send it to your leadership team and compare trees on Thursday. That's where it gets interesting.
+P.S. You'll disagree with where I put some of these. Good. A new truck is a Tuesday for a fleet and a root decision for a shop that's never bought one. This picture uses broad strokes; the real one is the version you draw with your team. Send it to your leadership team and compare trees on Thursday. The places you disagree are where the lines need drawing.
+
+P.P.S. The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in my hands since.
 
 ---
 

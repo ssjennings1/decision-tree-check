@@ -6,6 +6,10 @@ Merge fields on the page: `{{contact.first_name}}`. The two flags merge from fie
 
 Share line (all pages): *"I'm a {{stage}}. Bet your desk looks different. Two minutes, no grade. syncovatellc.com/desk"*
 
+Disagreement block (all pages, above the credit; Shannon 2026-10-27):
+
+> **You'll disagree with where I put some of these. Good.** Where a decision sits depends on your company. A new truck is a Tuesday for a fleet and a root decision for a shop that's never bought one. This picture uses broad strokes. The real one is the version you draw with your team, and the places you disagree are where the lines need drawing.
+
 Credit (small type, all pages): *The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in Dr. J's hands since. This is a gut check, not a diagnosis.*
 
 Buttons (all pages): **Book 15 minutes with Dr. J** · **Send this to someone whose desk you're curious about**

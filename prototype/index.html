@@ -130,6 +130,7 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
       <button class="ghost" id="share">Send this to someone whose desk you're curious about</button>
     </div>
     <div class="mail" id="mailbox" hidden><span class="small">Copy and paste into a text or email:</span><textarea id="mailtext" readonly></textarea><button class="ghost" id="copy">Copy</button></div>
+    <div class="branch" style="background:var(--muted);border-radius:10px;padding:12px 14px;font-size:15px"><b>You'll disagree with where I put some of these. Good.</b> Where a decision sits depends on your company. A new truck is a Tuesday for a fleet and a root decision for a shop that's never bought one. This picture uses broad strokes. The real one is the version you draw with your team, and the places you disagree are where the lines need drawing.</div>
     <details><summary class="small" style="cursor:pointer">The five levels, for your team</summary>
       <div class="tbl"><div><b>Leaf</b><span>You decide. No need to tell me.</span></div><div><b>Branch</b><span>You decide, then tell me.</span></div><div><b>Limb</b><span>You decide, but talk to me before you act.</span></div><div><b>Trunk</b><span>We decide together.</span></div><div><b>Root</b><span>I decide, with input from the people who'll live with it.</span></div></div></details>
     <p class="foot">The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in Dr. J's hands since. This is a gut check, not a diagnosis.</p>
@@ -141,7 +142,7 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
 // ---- data ----
 const L=["Leaf","Branch","Limb","Trunk","Root"];
 const SCREENS=[
- {t:"People",s:"Tap every decision that landed on you last week.",items:[
+ {t:"People",s:"Tap every decision that landed on you last week. Answer for your company, not the textbook.",items:[
   ["Approve time off for next Friday.",0],["Approve two people swapping schedules.",0],["Decide who covers when somebody calls in sick.",1],["Decide which big project starts tomorrow and which one waits.",1],["Plan a new hire's first week.",2],["Decide whether somebody moves into a different role.",2]]},
  {t:"Customers",s:"Same deal. Tap the decisions that came to you.",items:[
   ["Tell a customer when their order or project will be ready.",0],["Handle a customer complaint.",1],["Decide what changes after the same complaint shows up for the third time.",2],["Decide whether a good customer gets an exception on price or terms.",2]]},

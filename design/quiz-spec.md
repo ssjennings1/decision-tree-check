@@ -51,6 +51,10 @@ Every item is a decision, verb first (Shannon, 2026-10-27: "it's a decision tree
 
 Count by level: Leaf 5, Branch 5, Limb 4, Trunk 7, Root 7 (28 items). The two big-stuff screens (items 15–28) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
 
+## Disagreement is the point
+
+Levels are company-specific. A truck purchase is a leaf for a fleet and a root for a three-truck shop. The items are written as clearly as possible with scale anchors ("a few hundred dollars, not a few thousand"), the first screen says "answer for your company, not the textbook," and every result page carries the disagreement block: you'll disagree with where I put some of these, good, the real tree is the one you draw with your team. (Shannon, 2026-10-27.)
+
 ## Size and role (asked last)
 
 **How many people work here?** Under 10 · 10–25 · 26–40 · 41–100 · 100+
