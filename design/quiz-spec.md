@@ -9,42 +9,44 @@
 ## The flow
 
 1. **Door.** One line, one button.
-2. **Tap what landed.** 23 everyday things, across all five levels, on five screens (People / Customers / Money and operations / The big stuff / The really big stuff). Tap everything that came to you last week. The two big-stuff screens ask each item as Yes/No so a "no" can carry weight.
+2. **Tap what landed.** 25 everyday decisions, across all five levels, on five screens (People / Customers / Money and operations / The big stuff / The really big stuff). Tap every decision that landed on you last week. The two big-stuff screens ask each one as Yes/No so a "no" can carry weight.
 3. **Size and role.** Asked last, with the line that explains why: *"The map looks different at five people than at twenty-five. Everything running through you is the right answer at one of those sizes."*
 4. **Opt-in.** First name, email, Seed yes/no (default no). Email required; it gates the result.
 5. **Result.** The tree, lit by what landed. Stage, fit, one green flag, one red flag, One Move for Monday, two buttons.
 
 ## The items
 
-Each item belongs to a level. The taker never sees the level. Order on screen is mixed so the levels aren't guessable.
+Every item is a decision, verb first (Shannon, 2026-10-27: "it's a decision tree, so they should be decisions"). Two pairs escalate on purpose so the levels teach themselves: a complaint vs. the same complaint for the third time; a small renewal vs. the major one that keeps going up. Each item belongs to a level the taker never sees. Industry-neutral wording.
 
-| # | Item (as shown) | Level | Screen |
-|---|-----------------|-------|--------|
-| 1 | Somebody wanted next Friday off. | Leaf | People |
-| 2 | Two people wanted to swap schedules. | Leaf | People |
-| 3 | Somebody needed to know what to prioritize tomorrow. | Branch | People |
-| 4 | Somebody asked how to handle an unhappy customer. | Branch | People |
-| 5 | A new hire's first week needed a plan. | Limb | People |
-| 6 | Somebody wanted to move into a different role. | Limb | People |
-| 7 | A customer asked when their order or project would be ready. | Leaf | Customers |
-| 8 | A good customer asked for a favor on timing. | Branch | Customers |
-| 9 | A customer wanted an exception on price or terms. | Limb | Customers |
-| 10 | A long-time customer asked for something we're not set up to do yet. | Trunk | The big stuff |
-| 11 | Something broke and needed replacing. A few hundred dollars, not a few thousand. | Leaf | Money & operations |
-| 12 | A supplier or vendor said something would be late. | Branch | Money & operations |
-| 13 | A software renewal or a small recurring bill came due. | Leaf | Money & operations |
-| 14 | Somebody caught a mistake before it reached a customer. | Branch | Money & operations |
-| 15 | A question came up about what we offer for benefits. | Trunk | The big stuff |
-| 16 | Somebody asked what the review process is, or whether we have one. | Trunk | The big stuff |
-| 17 | Annual goals had to get set. | Trunk | The big stuff |
-| 18 | Your best person said they're thinking about leaving. | Root | The really big stuff |
-| 19 | We've outgrown our space and have to decide what's next. | Root | The really big stuff |
-| 20 | Whether it's time to hire a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
-| 21 | What the company looks like in five years. | Root | The really big stuff |
-| 22 | A competitor keeps hiring our best people. | Root | The really big stuff |
-| 23 | A competitor closed, is retiring, or is up for sale, and an opening appeared. | Root | The really big stuff |
+| # | Decision (as shown) | Level | Screen |
+|---|---------------------|-------|--------|
+| 1 | Approve time off for next Friday. | Leaf | People |
+| 2 | Approve two people swapping schedules. | Leaf | People |
+| 3 | Decide who covers when somebody calls in sick. | Branch | People |
+| 4 | Decide which big project starts tomorrow and which one waits. | Branch | People |
+| 5 | Plan a new hire's first week. | Limb | People |
+| 6 | Decide whether somebody moves into a different role. | Limb | People |
+| 7 | Tell a customer when their order or project will be ready. | Leaf | Customers |
+| 8 | Handle a customer complaint. | Branch | Customers |
+| 9 | Decide what changes after the same complaint shows up for the third time. | Limb | Customers |
+| 10 | Decide whether a good customer gets an exception on price or terms. | Limb | Customers |
+| 11 | Replace something that broke. A few hundred dollars. | Leaf | Money & operations |
+| 12 | Renew a small software subscription. | Leaf | Money & operations |
+| 13 | Decide what to do when a vendor says they'll be late. | Branch | Money & operations |
+| 14 | Decide how to fix a mistake somebody caught before it reached a customer. | Branch | Money & operations |
+| 15 | Decide whether to take on work a long-time customer wants that we're not set up for. | Trunk | The big stuff |
+| 16 | Renew a major software contract that keeps going up, or invest in infrastructure instead. | Trunk | The big stuff |
+| 17 | Decide what we offer for benefits. | Trunk | The big stuff |
+| 18 | Decide how people get reviewed, or whether they do. | Trunk | The big stuff |
+| 19 | Set this year's goals. | Trunk | The big stuff |
+| 20 | Decide what to do when your best person says they're thinking about leaving. | Root | The really big stuff |
+| 21 | Decide what's next now that we've outgrown our space. | Root | The really big stuff |
+| 22 | Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
+| 23 | Decide what the company looks like in five years. | Root | The really big stuff |
+| 24 | Decide how to respond to a competitor who keeps hiring our best people. | Root | The really big stuff |
+| 25 | Decide whether to make a move on a competitor that closed, is retiring, or is for sale. | Root | The really big stuff |
 
-Count by level: Leaf 5, Branch 5, Limb 3, Trunk 4, Root 6 (23 items). The two big-stuff screens (items 10 and 15–23) are asked as "Did this one come to you?" Yes/No. The trunk and root examples are Shannon's (2026-10-27).
+Count by level: Leaf 5, Branch 5, Limb 4, Trunk 5, Root 6 (25 items). The two big-stuff screens (items 15–25) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
 
 ## Size and role (asked last)
 

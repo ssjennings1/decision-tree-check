@@ -15,7 +15,7 @@ Sent as a one-off campaign, not a Seed. Plain personal look.
 
 I built something small and I want you to try it before anyone else does.
 
-Eighteen things that happen in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the ones that landed on your desk last week.
+Twenty-five decisions that come up in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the decisions that landed on you last week.
 
 Two minutes. No wrong answers, no grade. At the end you get a picture of your tree, whether it fits the size of your company and the seat you're in, and one thing to try Monday. It works for your leadership team too. Compare trees.
 
@@ -39,11 +39,11 @@ Send from Shannon's own inbox. Change the first paragraph for each person; the r
 
 [One personal line. Something you two talked about last time, or a reverse referral: "I sent Dan from Mid City your way last month; let me know if he reached out."]
 
-I built a quick gut check for owners and I think a few of your clients would get something out of it. Eighteen everyday things, tap what landed on your desk last week, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
+I built a quick gut check for owners and I think a few of your clients would get something out of it. Twenty-five everyday decisions, tap the ones that landed on you last week, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
 
 If an owner ever says to you "everything still runs through me," this is the thing to send them. Here's a paragraph you can forward as-is:
 
-> Shannon Jennings, who I've worked with, built a two-minute check for owners. Eighteen things that happen in every company. You tap what landed on your desk last week and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
+> Shannon Jennings, who I've worked with, built a two-minute check for owners. Twenty-five decisions that come up in every company. You tap what landed on your desk last week and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
 
 And if you'd like to try it yourself first, you'll know in two minutes whether it's worth passing on.
 
@@ -88,16 +88,16 @@ Dr. J
 
 Carousel, 11 slides, square. Cream background, charcoal text, gold accents. Personal, not corporate.
 
-1. **Ten things that landed on an owner's desk last week.** (Every one of them had a right answer. None of them needed her.)
-2. Somebody wanted Friday off.
-3. Two people wanted to swap schedules.
-4. Something broke. A few hundred dollars.
-5. A vendor said the delivery would be late.
-6. A customer asked when their order would be ready.
-7. A good customer asked for a favor on timing.
-8. Somebody caught a mistake before it reached a customer.
-9. Somebody needed to know what to prioritize tomorrow.
-10. A software renewal came due.
+1. **Ten decisions that landed on an owner's desk last week.** (Every one of them had a right answer. None of them needed her.)
+2. Approve Friday off.
+3. Approve two people swapping schedules.
+4. Replace something that broke. A few hundred dollars.
+5. Decide what to do when a vendor says they'll be late.
+6. Tell a customer when their order will be ready.
+7. Handle a customer complaint.
+8. Decide how to fix a mistake somebody caught in time.
+9. Decide which project starts tomorrow and which one waits.
+10. Renew a small software subscription.
 11. **Where did yours land?** Two minutes, no grade. syncovatellc.com/desk
 
 Post text: "I asked an owner to write down everything that reached her desk in one week. This was Tuesday. Not one of these needed her, and every one of them waited for her. That's not a character flaw. It's what happens when a company outgrows one person's ability to see everything and nobody has drawn the lines yet. I built a two-minute check so you can see your own list. Link on the last slide."
@@ -106,8 +106,8 @@ Post text: "I asked an owner to write down everything that reached her desk in o
 
 ## 6. LinkedIn poll (week +2)
 
-**Question:** Something breaks. A few hundred dollars to replace, not a few thousand. Last time that happened, where did it land?
-**Options (4):** Never reached me · Reached me after · They checked first · I made the call
+**Question:** Something breaks. A few hundred dollars to replace. Who decided to replace it?
+**Options (4):** Somebody else, I never heard · Somebody else, told me after · They checked with me first · Me
 **Duration:** 3 days.
 
 **Results post (week +2, after the poll closes):** "[N] owners answered. [X]% said the broken thing came to them. A few hundred dollars. The person who found it broken already knew it needed replacing. Here's what I'd say to each group: [one line per answer]. If you want to see your whole desk on the tree, two minutes, no grade: syncovatellc.com/desk"

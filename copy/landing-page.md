@@ -8,16 +8,16 @@ One job: get a start. Headline question, one line of what you get, a button with
 
 **H1:** What landed on your desk last week?
 
-**Sub:** Eighteen things that happen in every company. Tap the ones that came to you. No wrong answers, no grade.
+**Sub:** Twenty-five decisions that come up in every company. Tap the ones that landed on you. No wrong answers, no grade.
 
 **Button:** Let's see · about 2 minutes
 
-**Under the button (small):** You'll get a picture of your tree, whether it fits your stage and your seat, and one thing to try Monday.
+**Under the button (small):** You'll get a picture of your tree, whether it fits your stage and your seat, and one decision to move on Monday.
 
 ---
 
 **Strip (three short items, no icons needed):**
-- 18 things you'll recognize
+- 25 decisions you'll recognize
 - A picture of your tree you can send to your team
 - One move for Monday
 
