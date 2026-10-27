@@ -130,7 +130,7 @@ When you want a second set of eyes on where the lines should move next, I'm glad
 
 {{contact.dt_red_flag}}
 
-**One Move for Monday.** Pick the one small decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule. Then ask your leadership team why it got to you in the first place. That answer is the real finding.
+**One Move for Monday.** Pick the one small decision that came to you this month that you already knew the answer to before they finished asking. Hand it back with a rule. Then ask your leadership team why it got to you in the first place. That answer is the real finding.
 
 Redrawing the lines with your team in the room is the work I do. Fifteen minutes is enough to see if it fits.
 
