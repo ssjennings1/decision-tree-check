@@ -92,7 +92,7 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
     <label>How many people work here?
       <select id="size"><option value="b">Under 10</option><option value="s" selected>10–25</option><option value="s2">26–40</option><option value="a">41–100</option><option value="a2">100+</option></select></label>
     <label>What's your seat?
-      <select id="role"><option value="owner" selected>Owner / CEO / President</option><option value="lead">On the leadership team</option><option value="mgr">Manager or crew lead</option><option value="fam">Family member in the business</option></select></label>
+      <select id="role"><option value="owner" selected>Owner / CEO / President</option><option value="lead">On the leadership team</option><option value="mgr">Manager or team lead</option><option value="fam">Family member in the business</option></select></label>
     <div class="row"><button class="back" id="back2">← Back</button><button class="btn" id="toOptin" style="justify-self:end">Almost there</button></div>
   </section>
 
@@ -142,13 +142,13 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
 const L=["Leaf","Branch","Limb","Trunk","Root"];
 const SCREENS=[
  {t:"People",s:"Tap everything that came to you last week.",items:[
-  ["Somebody wanted next Friday off.",0],["Two people on a crew or shift wanted to swap days.",0],["A crew needed to know which job to start first tomorrow.",1],["Somebody asked how to handle a customer who was getting loud.",1],["A new hire's first week needed a plan.",2],["Somebody wanted to move into a different role.",2]]},
+  ["Somebody wanted next Friday off.",0],["Two people wanted to swap schedules.",0],["Somebody needed to know what to prioritize tomorrow.",1],["Somebody asked how to handle an unhappy customer.",1],["A new hire's first week needed a plan.",2],["Somebody wanted to move into a different role.",2]]},
  {t:"Customers",s:"Same deal. Tap what landed on you.",items:[
-  ["A customer called to ask when their order would be ready.",0],["A regular asked if we could squeeze in a rush job.",1],["A customer wanted a price exception.",2]]},
- {t:"Money and tools",s:"Keep going. You're more than halfway.",items:[
-  ["A tool broke and needed replacing. A few hundred bucks.",0],["A supplier said the delivery would be a day late.",1],["A software renewal or a small recurring bill came due.",0],["Somebody caught a quality problem before it went out the door.",1]]},
+  ["A customer asked when their order or project would be ready.",0],["A good customer asked for a favor on timing.",1],["A customer wanted an exception on price or terms.",2]]},
+ {t:"Money and operations",s:"Keep going. You're more than halfway.",items:[
+  ["Something broke and needed replacing. A few hundred dollars, not a few thousand.",0],["A supplier or vendor said something would be late.",1],["A software renewal or a small recurring bill came due.",0],["Somebody caught a mistake before it reached a customer.",1]]},
  {t:"The big stuff",s:"These are yes or no. Did this one come to you?",yn:true,items:[
-  ["A long-time customer asked for work we're not set up for yet.",3],["A piece of equipment that costs real money needed a yes or no.",3],["Your best person said they're thinking about leaving.",4],["A chance came up to add a service, a location, or a big new customer.",4],["Somebody asked what the company's going to look like in three years.",4]]}
+  ["A long-time customer asked for something we're not set up to do yet.",3],["A purchase that costs real money needed a yes or no.",3],["Your best person said they're thinking about leaving.",4],["A chance came up to add a service, a location, or a big new customer.",4],["Somebody asked what the company's going to look like in three years.",4]]}
 ];
 const ITEMS=SCREENS.flatMap(s=>s.items);
 // expected desk: 1 = should land, 0 = should be handled elsewhere, 0.5 = either
@@ -157,7 +157,7 @@ const EXP={
  "lead":[0,1,1,1,0],"mgr":[1,1,.5,0,0],"fam":[0,1,1,1,0]};
 const STAGE={b:"Builder",s:"Stretching",a:"Architect"};
 const GREEN={0:"The small stuff mostly gets handled without you. That's the hardest habit to build and you've built it.",1:"Day-to-day calls get made and you hear about them after. That's trust, and your people can feel it.",2:"The judgment calls come to you for a conversation, not a rescue. That's the right altitude.",3:"The decisions that shape the company are still yours to make together. Good.",4:"The make-or-break calls land on your desk. That's exactly where they belong."};
-const RED_HOLD={0:"The small stuff still finds its way to you. Friday off, a broken tool, a swapped shift. None of it needs you, and all of it waits for you.",1:"The everyday calls still route through you before they happen. Your people have the judgment. They're not sure they have the permission.",2:"The judgment calls come to you to be decided, not discussed. One sentence changes that: what would you do?"};
+const RED_HOLD={0:"The small stuff still finds its way to you. Friday off, a broken printer, a swapped schedule. None of it needs you, and all of it waits for you.",1:"The everyday calls still route through you before they happen. Your people have the judgment. They're not sure they have the permission.",2:"The judgment calls come to you to be decided, not discussed. One sentence changes that: what would you do?"};
 const RED_DRIFT={3:"Some of the decisions that shape the company are getting made without you in the room. That's worth a look this week.",4:"At least one make-or-break call didn't reach your desk. Those are the ones nobody else should be carrying alone.",2:"The judgment calls that should reach you mostly aren't. You're ready for more than you're getting.",1:"The everyday calls that should be yours are going over your head. Worth a conversation with whoever's above you."};
 const COPY={
  "owner:b:ok":{h:"You're a Builder, and you're right where you should be.",i:"At your size, everything runs through you because you built it, and that's the right answer. The tree is small enough to see all of it, and your people know who to ask. Most owners at this stage feel like they should be delegating more. Not yet.",m:"Pick one person who brought you something this week they could have handled. Next time, ask: “What would you do?” Then let them. You're not handing off the decision yet. You're finding out who's ready for the next branch.",c:"The next stage puts new weight on the tree, and it's where owners get stuck. When you're close, I'm glad to talk."},
@@ -239,7 +239,7 @@ function drawTree(res){
 }
 function result(){
   const res=compute(); const fn=$("fn").value.trim()||"there";
-  const stageName=res.role==="owner"?STAGE[res.stage]:(res.role==="mgr"?"crew lead":"leader");
+  const stageName=res.role==="owner"?STAGE[res.stage]:(res.role==="mgr"?"team lead":"leader");
   $("rhead").textContent=res.copy.h;
   $("rintro").textContent=(res.role==="fam"?FAM:"")+res.copy.i;
   drawTree(res);

@@ -22,7 +22,7 @@ Green (what you let go of well, or carry well):
 - Root: "The make-or-break calls land on your desk. That's exactly where they belong."
 
 Red (what you hold, or what's happening without you):
-- Leaf (holding): "The small stuff still finds its way to you. Friday off, a broken tool, a swapped shift. None of it needs you, and all of it waits for you."
+- Leaf (holding): "The small stuff still finds its way to you. Friday off, a broken printer, a swapped schedule. None of it needs you, and all of it waits for you."
 - Branch (holding): "The everyday calls still route through you before they happen. Your people have the judgment. They're not sure they have the permission."
 - Limb (holding): "The judgment calls come to you to be decided, not discussed. One sentence changes that: what would you do?"
 - Trunk (drifting): "Some of the decisions that shape the company are getting made without you in the room. That's worth a look this week."
@@ -184,7 +184,7 @@ If you want help naming which decisions are always yours, that's a conversation 
 
 **One Move for Monday.** Ask the owner one question: "Which decisions do you want me making without checking first?" Write down the answer.
 
-### Manager / crew lead (variant lines for the three states above)
+### Manager / team lead (variant lines for the three states above)
 
 - On track: "The small stuff and the day-to-day calls land on you, and the big ones go up. That's exactly the seat."
 - Climbing: not applicable (leaves belong here); use the "roots drifting" copy only if trunk items appear, otherwise show On track.

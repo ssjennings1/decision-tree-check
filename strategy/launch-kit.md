@@ -89,14 +89,14 @@ Dr. J
 Carousel, 11 slides, square. Cream background, charcoal text, gold accents. Personal, not corporate.
 
 1. **Ten things that landed on an owner's desk last week.** (Every one of them had a right answer. None of them needed her.)
-2. A customer called to ask when the order would be ready.
-3. Two guys on the crew wanted to swap days.
-4. A tool broke. A few hundred bucks.
-5. The supplier said the delivery would be a day late.
-6. Somebody asked for Friday off.
-7. A regular asked if we could squeeze in a rush job.
-8. Somebody caught a quality problem before it went out.
-9. The crew needed to know which job to start first.
+2. Somebody wanted Friday off.
+3. Two people wanted to swap schedules.
+4. Something broke. A few hundred dollars.
+5. A vendor said the delivery would be late.
+6. A customer asked when their order would be ready.
+7. A good customer asked for a favor on timing.
+8. Somebody caught a mistake before it reached a customer.
+9. Somebody needed to know what to prioritize tomorrow.
 10. A software renewal came due.
 11. **Where did yours land?** Two minutes, no grade. syncovatellc.com/desk
 
@@ -106,11 +106,11 @@ Post text: "I asked an owner to write down everything that reached her desk in o
 
 ## 6. LinkedIn poll (week +2)
 
-**Question:** A tool on the shop floor breaks. A few hundred bucks to replace. Last time that happened, where did it land?
+**Question:** Something breaks. A few hundred dollars to replace, not a few thousand. Last time that happened, where did it land?
 **Options (4):** Never reached me · Reached me after · They checked first · I made the call
 **Duration:** 3 days.
 
-**Results post (week +2, after the poll closes):** "[N] owners answered. [X]% said the broken tool came to them. A few hundred dollars. The person who found it broken already knew it needed replacing. Here's what I'd say to each group: [one line per answer]. If you want to see your whole desk on the tree, two minutes, no grade: syncovatellc.com/desk"
+**Results post (week +2, after the poll closes):** "[N] owners answered. [X]% said the broken thing came to them. A few hundred dollars. The person who found it broken already knew it needed replacing. Here's what I'd say to each group: [one line per answer]. If you want to see your whole desk on the tree, two minutes, no grade: syncovatellc.com/desk"
 
 ---
 

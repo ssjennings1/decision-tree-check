@@ -56,7 +56,7 @@ Set every page to noindex.
 
 **Slide 1 (door text):** "What landed on your desk last week?" + the two lines from the spec. Button: Let's see.
 
-**Slides 2–4 (People / Customers / Money and tools):** one Checkbox (multi-select) question per slide, label as in the spec ("Tap everything that came to you last week."), options = the items for that screen. Per-option points (if the builder scores checkbox options individually): Leaf +2, Branch +2, Limb +1. Map each option to its dt_item field (if the builder maps a checkbox question to a single field, map the whole question to a text field and let the workflow parse; see §7 alternative).
+**Slides 2–4 (People / Customers / Money and operations):** one Checkbox (multi-select) question per slide, label as in the spec ("Tap everything that came to you last week."), options = the items for that screen. Per-option points (if the builder scores checkbox options individually): Leaf +2, Branch +2, Limb +1. Map each option to its dt_item field (if the builder maps a checkbox question to a single field, map the whole question to a text field and let the workflow parse; see §7 alternative).
 
 **Slide 5 (The big stuff):** five Radio questions, "Did this one come to you?" Yes/No. Points: Trunk items Yes 0 / No +2; Root items Yes 0 / No +3. Map each to its dt_item field.
 

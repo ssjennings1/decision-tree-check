@@ -9,7 +9,7 @@
 ## The flow
 
 1. **Door.** One line, one button.
-2. **Tap what landed.** 18 everyday things, across all five levels, on four screens (People / Customers / Money and tools / The big stuff). Tap everything that came to you last week. The big-stuff screen asks each item as Yes/No so a "no" can carry weight.
+2. **Tap what landed.** 18 everyday things, across all five levels, on four screens (People / Customers / Money and operations / The big stuff). Tap everything that came to you last week. The big-stuff screen asks each item as Yes/No so a "no" can carry weight.
 3. **Size and role.** Asked last, with the line that explains why: *"The map looks different at five people than at twenty-five. Everything running through you is the right answer at one of those sizes."*
 4. **Opt-in.** First name, email, Seed yes/no (default no). Email required; it gates the result.
 5. **Result.** The tree, lit by what landed. Stage, fit, one green flag, one red flag, One Move for Monday, two buttons.
@@ -21,20 +21,20 @@ Each item belongs to a level. The taker never sees the level. Order on screen is
 | # | Item (as shown) | Level | Screen |
 |---|-----------------|-------|--------|
 | 1 | Somebody wanted next Friday off. | Leaf | People |
-| 2 | Two people on a crew or shift wanted to swap days. | Leaf | People |
-| 3 | A crew needed to know which job to start first tomorrow. | Branch | People |
-| 4 | Somebody asked how to handle a customer who was getting loud. | Branch | People |
+| 2 | Two people wanted to swap schedules. | Leaf | People |
+| 3 | Somebody needed to know what to prioritize tomorrow. | Branch | People |
+| 4 | Somebody asked how to handle an unhappy customer. | Branch | People |
 | 5 | A new hire's first week needed a plan. | Limb | People |
 | 6 | Somebody wanted to move into a different role. | Limb | People |
-| 7 | A customer called to ask when their order would be ready. | Leaf | Customers |
-| 8 | A regular asked if we could squeeze in a rush job. | Branch | Customers |
-| 9 | A customer wanted a price exception. | Limb | Customers |
-| 10 | A long-time customer asked for work we're not set up for yet. | Trunk | Customers |
-| 11 | A tool broke and needed replacing. A few hundred bucks. | Leaf | Money & tools |
-| 12 | A supplier said the delivery would be a day late. | Branch | Money & tools |
-| 13 | A software renewal or a small recurring bill came due. | Leaf | Money & tools |
-| 14 | A piece of equipment that costs real money needed a yes or no. | Trunk | Money & tools |
-| 15 | Somebody caught a quality problem before it went out the door. | Branch | Money & tools |
+| 7 | A customer asked when their order or project would be ready. | Leaf | Customers |
+| 8 | A good customer asked for a favor on timing. | Branch | Customers |
+| 9 | A customer wanted an exception on price or terms. | Limb | Customers |
+| 10 | A long-time customer asked for something we're not set up to do yet. | Trunk | Customers |
+| 11 | Something broke and needed replacing. A few hundred dollars, not a few thousand. | Leaf | Money & operations |
+| 12 | A supplier or vendor said something would be late. | Branch | Money & operations |
+| 13 | A software renewal or a small recurring bill came due. | Leaf | Money & operations |
+| 14 | A purchase that costs real money needed a yes or no. | Trunk | Money & operations |
+| 15 | Somebody caught a mistake before it reached a customer. | Branch | Money & operations |
 | 16 | Your best person said they're thinking about leaving. | Root | The big stuff |
 | 17 | A chance came up to add a service, a location, or a big new customer. | Root | The big stuff |
 | 18 | Somebody asked what the company's going to look like in three years. | Root | The big stuff |
@@ -44,7 +44,7 @@ Count by level: Leaf 5, Branch 5, Limb 3, Trunk 2, Root 3. The big-stuff screen 
 ## Size and role (asked last)
 
 **How many people work here?** Under 10 · 10–25 · 26–40 · 41–100 · 100+
-**What's your seat?** Owner / CEO / President · On the leadership team · Manager or crew lead · Family member in the business
+**What's your seat?** Owner / CEO / President · On the leadership team · Manager or team lead · Family member in the business
 
 Stage comes from size (the territory). Fit comes from role and stage together (what should be on this desk).
 
@@ -66,7 +66,7 @@ Which levels *should* land on this desk. ✔ = expected on the desk. ✘ = shoul
 | Owner, Stretching | ✘ | ~ | ✔ | ✔ | ✔ |
 | Owner, Architect | ✘ | ✘ | ~ | ✔ | ✔ |
 | Leadership team (any stage) | ✘ | ✔ | ✔ | ✔ | ✘ |
-| Manager / crew lead (any stage) | ✔ | ✔ | ~ | ✘ | ✘ |
+| Manager / team lead (any stage) | ✔ | ✔ | ~ | ✘ | ✘ |
 | Family member (any stage) | treated as Leadership team, with its own copy about bloodline vs. role | | | | |
 
 ## Fit

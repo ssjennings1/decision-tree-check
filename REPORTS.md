@@ -29,7 +29,7 @@ This one came out of you thinking out loud, so the design is yours; I built it.
 - Kept the no-negging rule at the level of every flag sentence; a red flag names the situation, never the person.
 
 **What I need from you**
-- Take the prototype three times: as an owner at 8 people with everything on your desk, as an owner at 30 who's handed off the small stuff, and as a crew lead. Tell me where the picture or the words are wrong.
+- Take the prototype three times: as an owner at 8 people with everything on your desk, as an owner at 30 who's handed off the small stuff, and as a team lead. Tell me where the picture or the words are wrong.
 - Ten minutes in Taft: open the old survey's settings and confirm the survey builder scores per answer and redirects by score. That decides whether the build is as clean as the spec says.
 
 **Still not done**
