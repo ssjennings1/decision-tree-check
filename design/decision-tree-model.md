@@ -12,6 +12,8 @@ The tree is just one metaphor. Build one that works for you. The idea is clarity
 | **Trunk** | We decide together. Direction, risk, strategy. Shapes everything else. | A new service line. A major equipment purchase. |
 | **Root** | I decide, with input from the people who'll live with it, and sometimes from outside. Make-or-break. | Selling, succession, a partner, a second location. |
 
+**The goal of the tree (Shannon, 2026-10-27):** clarity, empowerment, development, and a leader's desk that holds the most important on-the-business items. Every result, One Move, and email should point at those four, not just at relief for the owner.
+
 **The pattern the quiz exposes:** Most growing businesses treat everything like a trunk or root decision. Everything comes to the owner. The tree gets weighed down because nothing moves without the person at the center.
 
 **The story that goes with it:** The owner who built a tree on the wall outside her office. Every decision her people were empowered to make got a leaf with the key information and the person's name on it. People started stopping at the tree instead of knocking. The line got shorter. (Field Note 1 / Seed welcome Email 2.)

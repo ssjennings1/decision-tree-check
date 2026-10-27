@@ -4,6 +4,7 @@ Newest first. "S" = Shannon decided. "C" = Claude decided; Shannon said "you mak
 
 | Date | Decision | Who |
 |------|----------|-----|
+| 2026-10-27 | **The goal of the tree, in Shannon's words:** clarity, empowerment, development, and a leader's desk with the most important on-the-business items on it. Result copy, One Moves and emails rewritten to carry all four, not just relief. | S |
 | 2026-10-27 | Experimental run: Claude makes all calls, nothing goes live. Deliverable = working prototype + launch strategy. Tone: fun, interactive, useful, a gut check not a scientific tool. | S |
 | 2026-10-27 | **Title (the door):** "What Landed on Your Desk Last Week?" **Asset/result name:** "The Decision Tree Check" (Taft quiz name, custom-field prefix). **Slug:** `/desk`. Reason: second-person question titles beat framework names in every title dataset; the buyer responds to language about the business, not the owner. | C |
 | 2026-10-27 | **Show the score AND name the pattern.** Score as "Desk Load: NN of 40" (a number a CPA can repeat); pattern name as the headline (a label the owner will repeat). Both are supported natively in Taft. | C |

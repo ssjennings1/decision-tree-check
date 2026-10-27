@@ -30,7 +30,7 @@ Here's the model you just took a lap around, since you'll want it for your team.
 
 [model block]
 
-One Move for Monday. Find the one leaf that still climbs. Pick one decision in {{contact.the_decision_tree_check_highest_category_name}} this week and ask the person who brought it, "What would you do?" Then let them.
+One Move for Monday. Find the one leaf that still climbs. Pick one decision in {{contact.the_decision_tree_check_highest_category_name}} this week and ask the person who brought it, "What would you do?" Then let them. That question is how people grow into the next branch.
 
 Hit reply and tell me what comes up. I read every one.
 
@@ -58,9 +58,9 @@ Here's the model. Not every decision carries the same weight.
 
 [model block]
 
-Most growing businesses treat everything like a trunk or root decision. The tree gets weighed down because nothing moves without the person at the center.
+Most growing businesses treat everything like a trunk or root decision. The tree gets weighed down because nothing moves without the person at the center, and nobody grows into the next branch because nobody told them it was theirs. The point of the tree is clarity: everyone knows what they can decide, what to report back on, and what not to do alone. That's what clears your desk for the next hire, the next customer, the next year.
 
-One Move for Monday. Look at the last five things that landed on your desk. Pick one from {{contact.the_decision_tree_check_highest_category_name}}, hand it back to the person it belongs to, and give them the rule: you decide, then tell me.
+One Move for Monday. Look at the last five things that landed on your desk. Pick one from {{contact.the_decision_tree_check_highest_category_name}}, hand it back to the person it belongs to, and give them the rule: you decide, then tell me. Say it out loud. Clarity is the gift.
 
 Hit reply and tell me which one you picked. I read every one.
 
@@ -80,7 +80,7 @@ P.S. The Decision Tree started years ago from Susan Scott's work at Fierce. It's
 
 Your Desk Load came in at {{contact.the_decision_tree_check_overall_score}} of 40. Nearly everything on the list came to you, or waited for you. That's because you built this. You were the answer to every question in the building, and that's exactly how it grew.
 
-It's also why you can't step away without things slowing down, and why you're the last to hear about the things that matter. Nobody did this to you. It's what happens when a company outgrows one person's ability to see everything and nobody has drawn the lines yet. Builders are good at drawing lines. You just haven't pointed that at this.
+It's also why you can't step away without things slowing down, and why you're the last to hear about the things that matter. Nobody did this to you. It's what happens when a company outgrows one person's ability to see everything and nobody has drawn the lines yet. Builders are good at drawing lines. You just haven't pointed that at this yet. And the people bringing you things are ready for more than they're getting. Every decision you hand back with a clear rule is one they grow on, and one less thing between you and the work only you can do: where this company goes next.
 
 The heaviest branch right now is {{contact.the_decision_tree_check_highest_category_name}}.
 
@@ -88,7 +88,7 @@ Here's the model. Not every decision carries the same weight.
 
 [model block]
 
-One Move for Monday. Pick the one decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule attached: "This is yours. Make the call and tell me after." Then do it again next week.
+One Move for Monday. Pick the one decision that came to you this week that you already knew the answer to before they finished asking. Hand it back with a rule attached: "This is yours. Make the call and tell me after." Then do it again next week. Watch who steps up.
 
 Hit reply and tell me which one you picked. I read every one.
 
