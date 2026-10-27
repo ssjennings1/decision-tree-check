@@ -73,7 +73,7 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
   <section class="card" id="door">
     <span class="eyebrow">A two-minute gut check for leaders</span>
     <h1>What landed on your desk last week?</h1>
-    <p>Eighteen things that happen in every company. Tap the ones that came to you. No wrong answers, no grade.</p>
+    <p>Twenty-three things that happen in every company. Tap the ones that came to you. No wrong answers, no grade.</p>
     <p class="small">You'll get a picture of your tree, whether it fits your stage, and one thing to try Monday.</p>
     <button class="btn" id="start">Let's see &nbsp;·&nbsp; about 2 minutes</button>
   </section>
@@ -148,7 +148,9 @@ const SCREENS=[
  {t:"Money and operations",s:"Keep going. You're more than halfway.",items:[
   ["Something broke and needed replacing. A few hundred dollars, not a few thousand.",0],["A supplier or vendor said something would be late.",1],["A software renewal or a small recurring bill came due.",0],["Somebody caught a mistake before it reached a customer.",1]]},
  {t:"The big stuff",s:"These are yes or no. Did this one come to you?",yn:true,items:[
-  ["A long-time customer asked for something we're not set up to do yet.",3],["A purchase that costs real money needed a yes or no.",3],["Your best person said they're thinking about leaving.",4],["A chance came up to add a service, a location, or a big new customer.",4],["Somebody asked what the company's going to look like in three years.",4]]}
+  ["A long-time customer asked for something we're not set up to do yet.",3],["A question came up about what we offer for benefits.",3],["Somebody asked what the review process is, or whether we have one.",3],["Annual goals had to get set.",3]]},
+ {t:"The really big stuff",s:"Last screen. Yes or no.",yn:true,items:[
+  ["Your best person said they're thinking about leaving.",4],["We've outgrown our space and have to decide what's next.",4],["Whether it's time to hire a role we've never had, like a CFO instead of a bookkeeper.",4],["What the company looks like in five years.",4],["A competitor keeps hiring our best people.",4],["A competitor closed, is retiring, or is up for sale, and an opening appeared.",4]]}
 ];
 const ITEMS=SCREENS.flatMap(s=>s.items);
 // expected desk: 1 = should land, 0 = should be handled elsewhere, 0.5 = either
@@ -186,7 +188,7 @@ let base=0;
 function render(){
   const s=SCREENS[sc]; base=SCREENS.slice(0,sc).reduce((a,x)=>a+x.items.length,0);
   $("stitle").textContent=s.t; $("ssub").textContent=s.s;
-  $("count").textContent=(sc+1)+" of 4"; $("fill").style.width=(sc/4*100)+"%";
+  $("count").textContent=(sc+1)+" of 5"; $("fill").style.width=(sc/5*100)+"%";
   const c=$("chips"); c.innerHTML="";
   s.items.forEach((it,k)=>{const i=base+k;
     if(s.yn){const d=document.createElement("div");d.className="ynrow";d.innerHTML=`<span>${it[0]}</span>`;
@@ -195,12 +197,12 @@ function render(){
       d.appendChild(yn);c.appendChild(d);
     } else {const b=document.createElement("button");b.type="button";b.className="chip"+(on[i]?" on":"");b.innerHTML=`<span class="box">${on[i]?"✓":""}</span><span>${it[0]}</span>`;b.onclick=()=>{on[i]=!on[i];render();};c.appendChild(b);}
   });
-  $("back").hidden=(sc===0); $("next").textContent=(sc===3?"Next":"Next");
+  $("back").hidden=(sc===0); 
 }
 $("start").onclick=()=>{sc=0;render();show("q");};
 $("back").onclick=()=>{if(sc>0){sc--;render();}};
-$("next").onclick=()=>{if(sc<3){sc++;render();} else show("who");};
-$("back2").onclick=()=>{sc=3;render();show("q");};
+$("next").onclick=()=>{if(sc<4){sc++;render();} else show("who");};
+$("back2").onclick=()=>{sc=4;render();show("q");};
 $("toOptin").onclick=()=>show("optin");
 $("seedy").onclick=()=>{seed=true;$("seedy").classList.add("on");$("seedn").classList.remove("on");};
 $("seedn").onclick=()=>{seed=false;$("seedn").classList.add("on");$("seedy").classList.remove("on");};

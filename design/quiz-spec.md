@@ -9,7 +9,7 @@
 ## The flow
 
 1. **Door.** One line, one button.
-2. **Tap what landed.** 18 everyday things, across all five levels, on four screens (People / Customers / Money and operations / The big stuff). Tap everything that came to you last week. The big-stuff screen asks each item as Yes/No so a "no" can carry weight.
+2. **Tap what landed.** 23 everyday things, across all five levels, on five screens (People / Customers / Money and operations / The big stuff / The really big stuff). Tap everything that came to you last week. The two big-stuff screens ask each item as Yes/No so a "no" can carry weight.
 3. **Size and role.** Asked last, with the line that explains why: *"The map looks different at five people than at twenty-five. Everything running through you is the right answer at one of those sizes."*
 4. **Opt-in.** First name, email, Seed yes/no (default no). Email required; it gates the result.
 5. **Result.** The tree, lit by what landed. Stage, fit, one green flag, one red flag, One Move for Monday, two buttons.
@@ -29,17 +29,22 @@ Each item belongs to a level. The taker never sees the level. Order on screen is
 | 7 | A customer asked when their order or project would be ready. | Leaf | Customers |
 | 8 | A good customer asked for a favor on timing. | Branch | Customers |
 | 9 | A customer wanted an exception on price or terms. | Limb | Customers |
-| 10 | A long-time customer asked for something we're not set up to do yet. | Trunk | Customers |
+| 10 | A long-time customer asked for something we're not set up to do yet. | Trunk | The big stuff |
 | 11 | Something broke and needed replacing. A few hundred dollars, not a few thousand. | Leaf | Money & operations |
 | 12 | A supplier or vendor said something would be late. | Branch | Money & operations |
 | 13 | A software renewal or a small recurring bill came due. | Leaf | Money & operations |
-| 14 | A purchase that costs real money needed a yes or no. | Trunk | Money & operations |
-| 15 | Somebody caught a mistake before it reached a customer. | Branch | Money & operations |
-| 16 | Your best person said they're thinking about leaving. | Root | The big stuff |
-| 17 | A chance came up to add a service, a location, or a big new customer. | Root | The big stuff |
-| 18 | Somebody asked what the company's going to look like in three years. | Root | The big stuff |
+| 14 | Somebody caught a mistake before it reached a customer. | Branch | Money & operations |
+| 15 | A question came up about what we offer for benefits. | Trunk | The big stuff |
+| 16 | Somebody asked what the review process is, or whether we have one. | Trunk | The big stuff |
+| 17 | Annual goals had to get set. | Trunk | The big stuff |
+| 18 | Your best person said they're thinking about leaving. | Root | The really big stuff |
+| 19 | We've outgrown our space and have to decide what's next. | Root | The really big stuff |
+| 20 | Whether it's time to hire a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
+| 21 | What the company looks like in five years. | Root | The really big stuff |
+| 22 | A competitor keeps hiring our best people. | Root | The really big stuff |
+| 23 | A competitor closed, is retiring, or is up for sale, and an opening appeared. | Root | The really big stuff |
 
-Count by level: Leaf 5, Branch 5, Limb 3, Trunk 2, Root 3. The big-stuff screen (items 10, 14, 16, 17, 18) is asked as "Did this one come to you?" Yes/No.
+Count by level: Leaf 5, Branch 5, Limb 3, Trunk 4, Root 6 (23 items). The two big-stuff screens (items 10 and 15–23) are asked as "Did this one come to you?" Yes/No. The trunk and root examples are Shannon's (2026-10-27).
 
 ## Size and role (asked last)
 
