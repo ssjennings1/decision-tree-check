@@ -38,18 +38,18 @@ Every item is a decision, verb first (Shannon, 2026-10-27: "it's a decision tree
 | 16 | Renew a major software contract that keeps going up, or invest in infrastructure instead. | Trunk | The big stuff |
 | 17 | Decide what we offer for benefits. | Trunk | The big stuff |
 | 18 | Decide how people get reviewed, or whether they do. | Trunk | The big stuff |
-| 19 | Set this year's goals. | Trunk | The big stuff |
-| 20 | Decide what happens when sales promises something operations has to clean up. | Trunk | The big stuff |
-| 21 | Decide what the sales team's job is, because right now they're not sure. | Trunk | The big stuff |
-| 22 | Decide what to do when your best person says they're thinking about leaving. | Root | The really big stuff |
-| 23 | Decide what's next now that we've outgrown our space. | Root | The really big stuff |
-| 24 | Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
-| 25 | Decide what the company looks like in five years. | Root | The really big stuff |
-| 26 | Decide how to respond to a competitor who keeps hiring our best people. | Root | The really big stuff |
-| 27 | Decide whether to make a move on a competitor that closed, is retiring, or is for sale. | Root | The really big stuff |
-| 28 | Decide what happens after somebody was caught stealing from the company. | Root | The really big stuff |
+| 19 | Decide what happens when sales promises something operations has to clean up. | Trunk | The big stuff |
+| 20 | Decide what the sales team's job is, because right now they're not sure. | Trunk | The big stuff |
+| 21 | Decide what to do when your best person says they're thinking about leaving. | Root | The really big stuff |
+| 22 | Decide what's next now that we've outgrown our space. | Root | The really big stuff |
+| 23 | Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
+| 24 | Decide what the company looks like in five years. | Root | The really big stuff |
+| 25 | Decide how to respond to a competitor who keeps hiring our best people. | Root | The really big stuff |
+| 26 | Decide whether to make a move on a competitor that closed, is retiring, or is for sale. | Root | The really big stuff |
+| 27 | Decide what happens after somebody was caught stealing from the company. | Root | The really big stuff |
+| 28 | Set this year's goals. | Root | The really big stuff |
 
-Count by level: Leaf 5, Branch 5, Limb 4, Trunk 7, Root 7 (28 items). The two big-stuff screens (items 15–28) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
+Count by level: Leaf 5, Branch 5, Limb 4, Trunk 6, Root 8 (28 items). Root = affects the whole company, may involve key stakeholders, buck stops with the top leader; that's why annual goals sit at Root. The two big-stuff screens (items 15–28) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
 
 ## Disagreement is the point
 

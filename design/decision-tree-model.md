@@ -10,7 +10,7 @@
 | Trunk | Employee and supervisor involve additional teams/leaders, because it reaches beyond the functional area. | We decide together. |
 | Root | Made by the whole organization; may involve key stakeholders. | I decide, with input from the people who'll live with it. |
 
-The two agree on the shape (who gets involved widens as you go down the tree). They differ on Limb (together vs. talk first) and Root (whole organization vs. owner with input). Which one governs is Shannon's call; the tool's item placements are checked against both below.
+The two agree on the shape (who gets involved widens as you go down the tree). They differ on Limb (together vs. talk first) and Root (whole organization vs. owner with input). Settled 2026-10-27: Root = "affects the whole organization, may involve key stakeholders, the buck stops with the top leader." Limb stays as the Seed wording (you decide, talk to me first) for the tool; the original's "together" reads the same from the employee's side.
 
 Source: Shannon's own teaching, latest wording from the Saturday Seed welcome sequence Email 2 (Oct 26, 2026) and Field Note 1. Credit line: *"The Decision Tree started years ago from Susan Scott's work at Fierce. It's grown a lot in my hands since."*
 
@@ -22,7 +22,7 @@ The tree is just one metaphor. Build one that works for you. The idea is clarity
 | **Branch** | You decide, then tell me. I trust you, I just want to know. | A customer escalation. Reviewing a vendor's performance. |
 | **Limb** | You decide, but talk to me before you act. | A pricing exception. Moving someone to a new role. |
 | **Trunk** | We decide together. Direction, risk, strategy. Shapes everything else. | A new service line. A major equipment purchase. |
-| **Root** | I decide, with input from the people who'll live with it, and sometimes from outside. Make-or-break. | Selling, succession, a partner, a second location. |
+| **Root** | Affects the whole company. May involve key stakeholders. The buck stops with the top leader. (Canonical wording, Shannon 2026-10-27, merging the original graphic and the Seed version.) | Selling, succession, a partner, a second location, this year's goals. |
 
 **The goal of the tree (Shannon, 2026-10-27):** clarity, empowerment, development, and a leader's desk that holds the most important on-the-business items. Every result, One Move, and email should point at those four, not just at relief for the owner.
 

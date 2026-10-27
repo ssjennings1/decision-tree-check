@@ -10,7 +10,7 @@ The five-level model block appears in every result email. Keep it identical:
 > Branch: you decide, then tell me.
 > Limb: you decide, but talk to me before you act.
 > Trunk: we decide together.
-> Root: I decide, with input from the people who'll live with it.
+> Root: affects the whole company, may involve key stakeholders, and the buck stops with the top leader.
 
 ---
 
