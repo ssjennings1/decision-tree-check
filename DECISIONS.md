@@ -12,7 +12,7 @@ Newest first. "S" = Shannon decided. "C" = Claude decided on his own and it's re
 | 2026-10-27 | Opt-in screen sits after the questions and before the result. | C |
 | 2026-10-27 | Seed subscription is a Yes/No question defaulting to No on the opt-in page (recommendation; see open questions). | C |
 | 2026-10-27 | Result C triggers an internal notification only, no automated pitch. | C |
-| 2026-10-27 | Repo folder name `decision-tree-check`. GitHub repo not yet created (no GitHub write access from this session). | C |
+| 2026-10-27 | Repo lives at github.com/ssjennings1/decision-tree-check (Shannon created it; pushed same day). | S |
 
 ## Open questions for Shannon
 
@@ -21,4 +21,3 @@ Newest first. "S" = Shannon decided. "C" = Claude decided on his own and it's re
 3. Q1 and Q8 are branch-level in your own examples; keep them, or swap for the leaf-level alternatives in the spec?
 4. Result A: show the 15-minute booking button or not?
 5. Do you want the old `scotoma-spotter` repo archived once the redirect is live?
-6. GitHub: this session can't create repos. Create an empty public or private repo named `decision-tree-check` under ssjennings1 and I'll push on the next session, or I hand you a zip.

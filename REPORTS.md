@@ -24,7 +24,7 @@ Newest first. Same shape every time: what I did, what I decided on my own, what 
 - The six open questions in `DECISIONS.md`. Name, Seed opt-in, two borderline questions, the Result A button, archiving the old repo, and creating the GitHub repo.
 
 **What I couldn't do**
-- Push to GitHub. This session has read access to your repos but can't create one. If you create an empty `decision-tree-check` repo under ssjennings1, I'll push next time; otherwise I hand you a zip.
+- (Resolved 09:10) Pushed to github.com/ssjennings1/decision-tree-check once Shannon created the repo.
 - Confirm two Taft details that aren't documented: how category ties break, and whether the generic "On Submit" setting interferes with the results page. Both are in the build spec as test steps.
 
 **What's next**
