@@ -54,13 +54,13 @@ The next stage puts new weight on the tree, and it's the stage where owners get 
 
 **You're a Builder, and some of the big calls are getting made without you.**
 
-{{contact.first_name}}, at your size the whole tree should be in your line of sight, and most of it is. But at least one of the decisions that can make or break the company didn't reach your desk last week. That happens when an owner is heads-down in the work and the big stuff shows up quietly.
+{{contact.first_name}}, at your size the whole tree should be in your line of sight, and most of it is. But at least one of the decisions that can make or break the company didn't reach your desk in the last two weeks. That happens when an owner is heads-down in the work and the big stuff shows up quietly.
 
 {{contact.dt_green_flag}}
 
 {{contact.dt_red_flag}}
 
-**One Move for Monday.** Ask one question of your people: "What's the biggest thing you decided last week?" Then listen for the one that should have been yours.
+**One Move for Monday.** Ask one question of your people: "What's the biggest thing you decided in the last two weeks?" Then listen for the one that should have been yours.
 
 If you want help drawing the lines for who decides what, that's a conversation I'm glad to have.
 

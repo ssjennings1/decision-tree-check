@@ -14,7 +14,7 @@ Login: app.taftsystems.com. Location yCTzggMS1VT4xrqF3lML.
 
 | Field | Type | Notes |
 |-------|------|-------|
-| dt_item_01 … dt_item_28 | Yes/No (radio) | one per item, mapped from the survey; "Yes" = landed on my desk |
+| dt_item_01 … dt_item_25 | Yes/No (radio) | one per item, mapped from the survey; "Yes" = landed on my desk |
 | dt_company_size | Dropdown | Under 10 / 10–25 / 26–40 / 41–100 / 100+ |
 | dt_role | Dropdown | Owner / Leadership team / Manager / Family member |
 | dt_stage | Text | Builder / Stretching / Architect (workflow writes) |
@@ -56,11 +56,9 @@ Set every page to noindex.
 
 **Slide 1 (door text):** "What landed on your desk last week?" + the two lines from the spec. Button: Let's see.
 
-**Slides 2–4 (People / Customers / Money and operations):** one Checkbox (multi-select) question per slide, label as in the spec ("Tap every decision that landed on you last week."), options = the items for that screen. Per-option points (if the builder scores checkbox options individually): Leaf +2, Branch +2, Limb +1. Map each option to its dt_item field (if the builder maps a checkbox question to a single field, map the whole question to a text field and let the workflow parse; see §7 alternative).
+**Slides 2–6 (People / Customers / Money / Operations / Strategy):** one slide per category, five items each, shuffled so the levels aren't in order. Every item is its own Yes/No radio ("Did this land on you in the last two weeks?") so a "No" can carry points; a checkbox list can't score what wasn't ticked. Points: Leaf Yes +2, Branch Yes +2, Limb Yes +1; Trunk No +2; Root No +3. Map each to its dt_item field.
 
-**Slides 5–6 (The big stuff / The really big stuff):** fourteen Radio questions, "Did this decision come to you?" Yes/No. Points: Trunk items Yes 0 / No +2; Root items Yes 0 / No +3. Map each to its dt_item field.
-
-**Slide 7 (size and role):** text block with the "map looks different" line. Dropdown company size → dt_company_size, with points: Under 10 −10, 10–25 −4, 26–40 −2, 41–100 0, 100+ 0. Radio role → dt_role, with points: Owner 0, Leadership team −2, Manager −6, Family member −2. (These are starting values; tune against the prototype and the §8 cases. With ten big-stuff items the drifting points are larger than before, so expect to lower the "No" points to +1 / +2.)
+**Slide 7 (size and role):** text block with the "map looks different" line. Dropdown company size → dt_company_size, with points: Under 10 −10, 10–25 −4, 26–40 −2, 41–100 0, 100+ 0. Radio role → dt_role, with points: Owner 0, Leadership team −2, Manager −6, Family member −2. (Starting values; tune against the prototype and the §8 cases.)
 
 **Slide 8 (opt-in):** "Your picture's ready." First Name (required), Email (required), Seed opt-in radio Yes/No default No → seed_optin. Submit: Show me.
 

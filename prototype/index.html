@@ -72,8 +72,8 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
 
   <section class="card" id="door">
     <span class="eyebrow">A two-minute gut check for leaders</span>
-    <h1>What landed on your desk last week?</h1>
-    <p>Twenty-eight decisions that come up in every company. Tap the ones that landed on you. No wrong answers, no grade.</p>
+    <h1>What landed on your desk?</h1>
+    <p>Twenty-five decisions that come up in every company. Tap the ones that landed on you in the last two weeks. No wrong answers, no grade.</p>
     <p class="small">You'll get a picture of your tree, whether it fits your stage and your seat, and one decision to move on Monday.</p>
     <button class="btn" id="start">Let's see &nbsp;·&nbsp; about 2 minutes</button>
   </section>
@@ -142,16 +142,11 @@ details .tbl{display:grid;gap:4px;font-size:14px;margin-top:10px}.tbl div{displa
 // ---- data ----
 const L=["Leaf","Branch","Limb","Trunk","Root"];
 const SCREENS=[
- {t:"People",s:"Tap every decision that landed on you last week.",items:[
-  ["Approve time off for next Friday.",0],["Approve two people swapping schedules.",0],["Decide who covers when somebody calls in sick.",1],["Decide which big project starts tomorrow and which one waits.",1],["Plan a new hire's first week.",2],["Decide whether somebody moves into a different role.",2]]},
- {t:"Customers",s:"Same deal. Tap the decisions that came to you.",items:[
-  ["Tell a customer when their order or project will be ready.",0],["Handle a customer complaint.",1],["Decide what changes after the same complaint shows up for the third time.",2],["Decide whether a good customer gets an exception on price or terms.",2]]},
- {t:"Money and operations",s:"Keep going. You're more than halfway.",items:[
-  ["Replace something that broke. A few hundred dollars.",0],["Renew a small software subscription.",0],["Decide what to do when a vendor says they'll be late.",1],["Decide how to fix a mistake somebody caught before it reached a customer.",1]]},
- {t:"The big stuff",s:"These are yes or no. Did this decision come to you?",yn:true,items:[
-  ["Decide whether to take on work a long-time customer wants that we're not set up for.",3],["Renew a major software contract that keeps going up, or invest in infrastructure instead.",3],["Decide what we offer for benefits.",3],["Decide how people get reviewed, or whether they do.",3],["Decide what happens when sales promises something operations has to clean up.",3],["Decide what the sales team's job is, because right now they're not sure.",3]]},
- {t:"The really big stuff",s:"Last screen. Did this decision come to you?",yn:true,items:[
-  ["Decide what to do when your best person says they're thinking about leaving.",4],["Decide what's next now that we've outgrown our space.",4],["Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper.",4],["Decide what the company looks like in five years.",4],["Decide how to respond to a competitor who keeps hiring our best people.",4],["Decide whether to make a move on a competitor that closed, is retiring, or is for sale.",4],["Decide what happens after somebody was caught stealing from the company.",4],["Set this year's goals.",4]]}
+ {t:"People",s:"Tap every decision that landed on you in the last two weeks.",items:[["Decide whether somebody moves into a different role.",2],["Approve time off for next Friday.",0],["Decide what our values are and what our culture is going to be.",4],["Decide who covers when somebody's out sick.",1],["Decide what we offer for benefits and time off.",3]]},
+ {t:"Customers",s:"Same question. Tap what landed on you.",items:[["Decide whether a long-time customer gets an exception on price or terms.",2],["Give a customer a delivery date.",0],["Decide whether to take on bigger work for a customer that means investing in new tools.",4],["Handle a customer complaint.",1],["Decide what changes after the same complaint shows up for the third time.",3]]},
+ {t:"Money",s:"Keep going. Tap what landed on you.",items:[["Decide whether to repair the old one or buy new.",2],["Replace everyday equipment. A few hundred dollars.",0],["Decide whether it's time for a CFO instead of a bookkeeper.",4],["Approve a purchase a manager wants that's over their usual limit.",1],["Buy software that changes how everybody works.",3]]},
+ {t:"Operations",s:"Almost there.",items:[["Decide how to handle a safety concern somebody raised.",2],["Choose between FedEx and UPS.",0],["Decide what's next now that we've outgrown our space.",4],["Decide what to do when a vendor misses a delivery.",1],["Change a process everybody touches.",3]]},
+ {t:"Strategy",s:"Last screen.",items:[["Set this quarter's priorities.",2],["Decide which association meeting or local event we show up at.",0],["Decide whether to grow next year, or stay the size we are.",4],["Decide how to respond when a competitor drops their prices.",1],["Decide how to respond to a competitor who keeps hiring our best people.",3]]}
 ];
 const ITEMS=SCREENS.flatMap(s=>s.items);
 // expected desk: 1 = should land, 0 = should be handled elsewhere, 0.5 = either

@@ -9,13 +9,13 @@ Everything Shannon needs to send, in her voice, in the order the plan runs it. N
 Sent as a one-off campaign, not a Seed. Plain personal look.
 
 **Subject:** Two minutes, no grade
-**Preview:** Ten things that happen in every company. Where did they land last week?
+**Preview:** Ten things that happen in every company. Where did they land in the last two weeks?
 
 {{contact.first_name}},
 
 I built something small and I want you to try it before anyone else does.
 
-Twenty-eight decisions that come up in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the decisions that landed on you last week.
+Twenty-five decisions that come up in every company. A tool breaks. Somebody wants Friday off. Your best person says they're thinking about leaving. You tap the decisions that landed on you in the last two weeks.
 
 Two minutes. No wrong answers, no grade. At the end you get a picture of your tree, whether it fits the size of your company and the seat you're in, and one thing to try Monday. It works for your leadership team too. Compare trees.
 
@@ -39,11 +39,11 @@ Send from Shannon's own inbox. Change the first paragraph for each person; the r
 
 [One personal line. Something you two talked about last time, or a reverse referral: "I sent Dan from Mid City your way last month; let me know if he reached out."]
 
-I built a quick gut check for owners and I think a few of your clients would get something out of it. Twenty-eight everyday decisions, tap the ones that landed on you last week, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
+I built a quick gut check for owners and I think a few of your clients would get something out of it. Twenty-five everyday decisions, tap the ones that landed on you in the last two weeks, two minutes, no grade. It shows them a picture of which decisions are climbing to them and which are drifting, whether that fits the size of the company, and one thing to try Monday. Their leadership team can take it too and compare.
 
 If an owner ever says to you "everything still runs through me," this is the thing to send them. Here's a paragraph you can forward as-is:
 
-> Shannon Jennings, who I've worked with, built a two-minute check for owners. Twenty-eight decisions that come up in every company. You tap what landed on your desk last week and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
+> Shannon Jennings, who I've worked with, built a two-minute check for owners. Twenty-five decisions that come up in every company. You tap what landed on your desk in the last two weeks and it draws you a picture. No sales pitch, no grade, one thing to try Monday. syncovatellc.com/desk
 
 And if you'd like to try it yourself first, you'll know in two minutes whether it's worth passing on.
 
@@ -58,7 +58,7 @@ Shannon
 Final slide, up during the applause and the next speaker's setup.
 
 **Big:** Two minutes. No grade.
-**Medium:** What landed on your desk last week?
+**Medium:** What landed on your desk in the last two weeks?
 **QR code** → Taft quiz direct link with `?source=disrupthr` (or a dedicated redirect `/desk-lansing`, `/desk-fortwayne` so each talk is countable)
 **Small:** syncovatellc.com/desk
 
@@ -88,7 +88,7 @@ Dr. J
 
 Carousel, 11 slides, square. Cream background, charcoal text, gold accents. Personal, not corporate.
 
-1. **Ten decisions that landed on an owner's desk last week.** (Every one of them had a right answer. None of them needed her.)
+1. **Ten decisions that landed on an owner's desk in the last two weeks.** (Every one of them had a right answer. None of them needed her.)
 2. Approve Friday off.
 3. Approve two people swapping schedules.
 4. Replace something that broke. A few hundred dollars.
@@ -118,7 +118,7 @@ Post text: "I asked an owner to write down everything that reached her desk in o
 
 - **Site footer, under Writing:** "The two-minute desk check"
 - **Seed footer line:** "New here? Take the two-minute desk check: syncovatellc.com/desk"
-- **Email signature line (prospect version only):** "What landed on your desk last week? Two minutes, no grade: syncovatellc.com/desk"
+- **Email signature line (prospect version only):** "What landed on your desk in the last two weeks? Two minutes, no grade: syncovatellc.com/desk"
 - **Podcast outro:** "If you want to know how much of your company still runs through you, there's a two-minute check at syncovatellc.com/desk. No grade."
 
 ---

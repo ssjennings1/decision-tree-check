@@ -1,6 +1,6 @@
 # Spec v2 — What Landed on Your Desk Last Week?
 
-**Door:** What landed on your desk last week?
+**Door:** What landed on your desk?
 **Asset name:** The Decision Tree Check (Taft survey name, tag prefix)
 **Slug:** syncovatellc.com/desk
 **What it is:** a picture, not a diagnosis. The tree is the model for the decisions. The desk is the leader. The result shows where the weight sits on your tree, whether that fits your stage and role, and two tips.
@@ -9,47 +9,44 @@
 ## The flow
 
 1. **Door.** One line, one button.
-2. **Tap what landed.** 28 everyday decisions, across all five levels, on five screens (People / Customers / Money and operations / The big stuff / The really big stuff). Tap every decision that landed on you last week. The two big-stuff screens ask each one as Yes/No so a "no" can carry weight.
+2. **Tap what landed.** 25 everyday decisions on five screens (People / Customers / Money / Operations / Strategy), one of each level per screen, shuffled. Tap every decision that landed on you in the last two weeks. Nothing on screen gives the level away.
 3. **Size and role.** Asked last, with the line that explains why: *"The map looks different at five people than at twenty-five. Everything running through you is the right answer at one of those sizes."*
 4. **Opt-in.** First name, email, Seed yes/no (default no). Email required; it gates the result.
 5. **Result.** The tree, lit by what landed. Stage, fit, one green flag, one red flag, One Move for Monday, two buttons.
 
 ## The items
 
-Every item is a decision, verb first (Shannon, 2026-10-27: "it's a decision tree, so they should be decisions"). Two pairs escalate on purpose so the levels teach themselves: a complaint vs. the same complaint for the third time; a small renewal vs. the major one that keeps going up. Each item belongs to a level the taker never sees. Industry-neutral wording.
+Twenty-five decisions, five categories, one of each level in every category (Shannon, 2026-10-27: "25 checkboxes across 5 categories"). Every item is a decision, verb first. The taker never sees the level; within a screen the five items are shuffled. Window: the last two weeks.
 
 | # | Decision (as shown) | Level | Screen |
 |---|---------------------|-------|--------|
 | 1 | Approve time off for next Friday. | Leaf | People |
-| 2 | Approve two people swapping schedules. | Leaf | People |
-| 3 | Decide who covers when somebody calls in sick. | Branch | People |
-| 4 | Decide which big project starts tomorrow and which one waits. | Branch | People |
-| 5 | Plan a new hire's first week. | Limb | People |
-| 6 | Decide whether somebody moves into a different role. | Limb | People |
-| 7 | Tell a customer when their order or project will be ready. | Leaf | Customers |
-| 8 | Handle a customer complaint. | Branch | Customers |
-| 9 | Decide what changes after the same complaint shows up for the third time. | Limb | Customers |
-| 10 | Decide whether a good customer gets an exception on price or terms. | Limb | Customers |
-| 11 | Replace something that broke. A few hundred dollars. | Leaf | Money & operations |
-| 12 | Renew a small software subscription. | Leaf | Money & operations |
-| 13 | Decide what to do when a vendor says they'll be late. | Branch | Money & operations |
-| 14 | Decide how to fix a mistake somebody caught before it reached a customer. | Branch | Money & operations |
-| 15 | Decide whether to take on work a long-time customer wants that we're not set up for. | Trunk | The big stuff |
-| 16 | Renew a major software contract that keeps going up, or invest in infrastructure instead. | Trunk | The big stuff |
-| 17 | Decide what we offer for benefits. | Trunk | The big stuff |
-| 18 | Decide how people get reviewed, or whether they do. | Trunk | The big stuff |
-| 19 | Decide what happens when sales promises something operations has to clean up. | Trunk | The big stuff |
-| 20 | Decide what the sales team's job is, because right now they're not sure. | Trunk | The big stuff |
-| 21 | Decide what to do when your best person says they're thinking about leaving. | Root | The really big stuff |
-| 22 | Decide what's next now that we've outgrown our space. | Root | The really big stuff |
-| 23 | Decide whether it's time for a role we've never had, like a CFO instead of a bookkeeper. | Root | The really big stuff |
-| 24 | Decide what the company looks like in five years. | Root | The really big stuff |
-| 25 | Decide how to respond to a competitor who keeps hiring our best people. | Root | The really big stuff |
-| 26 | Decide whether to make a move on a competitor that closed, is retiring, or is for sale. | Root | The really big stuff |
-| 27 | Decide what happens after somebody was caught stealing from the company. | Root | The really big stuff |
-| 28 | Set this year's goals. | Root | The really big stuff |
+| 2 | Decide who covers when somebody's out sick. | Branch | People |
+| 3 | Decide whether somebody moves into a different role. | Limb | People |
+| 4 | Decide what we offer for benefits and time off. | Trunk | People |
+| 5 | Decide what our values are and what our culture is going to be. | Root | People |
+| 6 | Give a customer a delivery date. | Leaf | Customers |
+| 7 | Handle a customer complaint. | Branch | Customers |
+| 8 | Decide whether a long-time customer gets an exception on price or terms. | Limb | Customers |
+| 9 | Decide what changes after the same complaint shows up for the third time. | Trunk | Customers |
+| 10 | Decide whether to take on bigger work for a customer that means investing in new tools. | Root | Customers |
+| 11 | Replace everyday equipment. A few hundred dollars. | Leaf | Money |
+| 12 | Approve a purchase a manager wants that's over their usual limit. | Branch | Money |
+| 13 | Decide whether to repair the old one or buy new. | Limb | Money |
+| 14 | Buy software that changes how everybody works. | Trunk | Money |
+| 15 | Decide whether it's time for a CFO instead of a bookkeeper. | Root | Money |
+| 16 | Choose between FedEx and UPS. | Leaf | Operations |
+| 17 | Decide what to do when a vendor misses a delivery. | Branch | Operations |
+| 18 | Decide how to handle a safety concern somebody raised. | Limb | Operations |
+| 19 | Change a process everybody touches. | Trunk | Operations |
+| 20 | Decide what's next now that we've outgrown our space. | Root | Operations |
+| 21 | Decide which association meeting or local event we show up at. | Leaf | Strategy |
+| 22 | Decide how to respond when a competitor drops their prices. | Branch | Strategy |
+| 23 | Set this quarter's priorities. | Limb | Strategy |
+| 24 | Decide how to respond to a competitor who keeps hiring our best people. | Trunk | Strategy |
+| 25 | Decide whether to grow next year, or stay the size we are. | Root | Strategy |
 
-Count by level: Leaf 5, Branch 5, Limb 4, Trunk 6, Root 8 (28 items). Root = affects the whole company, may involve key stakeholders, buck stops with the top leader; that's why annual goals sit at Root. The two big-stuff screens (items 15–28) are asked as "Did this decision come to you?" Yes/No. Trunk and root examples are Shannon's.
+Count by level: 5 each (25 items). Candidates not used, available to swap in: make a critical hire (People, root); your best person says they're thinking about leaving (People, trunk); somebody caught stealing (People, root); decide who our ideal customer is (Customers, root); go after a new product or service line (Operations/Strategy, root); retool the line (Operations, root); set this year's goals (Strategy, trunk); what the company looks like in five years (Strategy, root); a competitor who's retiring is for sale (Strategy, root).
 
 ## Disagreement is the point
 

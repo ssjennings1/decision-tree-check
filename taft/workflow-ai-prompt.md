@@ -16,16 +16,16 @@ Step 2: If/Else on custom field dt_company_size. "Under 10" → Update field dt_
 
 Step 3: If/Else on dt_role → Add tag dt-role-owner / dt-role-lead / dt-role-mgr / dt-role-fam.
 
-Step 4: Math Operation steps. For each of dt_item_01 … dt_item_28, if the field is "Yes", add 1 to the matching level counter: leaf items (01, 02, 07, 11, 12) → dt_leaf; branch items (03, 04, 08, 13, 14) → dt_branch; limb items (05, 06, 09, 10) → dt_limb; trunk items (15–20) → dt_trunk; root items (21–28) → dt_root. Item numbers follow design/quiz-spec.md.
+Step 4: Math Operation steps. For each of dt_item_01 … dt_item_25, if the field is "Yes", add 1 to the matching level counter. Items are numbered by screen in design/quiz-spec.md; within each screen the order is Leaf, Branch, Limb, Trunk, Root, so leaf items are 01, 06, 11, 16, 21 → dt_leaf; branch 02, 07, 12, 17, 22 → dt_branch; limb 03, 08, 13, 18, 23 → dt_limb; trunk 04, 09, 14, 19, 24 → dt_trunk; root 05, 10, 15, 20, 25 → dt_root.
 
 Step 5: Decide dt_state and the flags. Use these rules (climbing = items landing from levels that belong lower; drifting = items missing from levels that belong on this desk):
-- Owner + Builder: nothing counts as climbing. drifting = (6 − dt_trunk) + (8 − dt_root) + (4 − dt_limb). If drifting ≥ 2 → dt_state "drift", else "ok".
-- Owner + Stretching: climbing = dt_leaf. drifting = (4 − dt_limb) + (6 − dt_trunk) + (8 − dt_root). If climbing ≥ 2 and climbing ≥ drifting → "climb"; else if drifting ≥ 2 → "drift"; else "ok".
-- Owner + Architect: climbing = dt_leaf + dt_branch. drifting = (6 − dt_trunk) + (8 − dt_root). Same decision rule.
-- Leadership team or Family member: climbing = dt_leaf. drifting = (5 − dt_branch) + (4 − dt_limb) + (6 − dt_trunk). Same rule.
+- Owner + Builder: nothing counts as climbing. drifting = (5 − dt_trunk) + (5 − dt_root) + (5 − dt_limb). If drifting ≥ 2 → dt_state "drift", else "ok".
+- Owner + Stretching: climbing = dt_leaf. drifting = (5 − dt_limb) + (5 − dt_trunk) + (5 − dt_root). If climbing ≥ 2 and climbing ≥ drifting → "climb"; else if drifting ≥ 2 → "drift"; else "ok".
+- Owner + Architect: climbing = dt_leaf + dt_branch. drifting = (5 − dt_trunk) + (5 − dt_root). Same decision rule.
+- Leadership team or Family member: climbing = dt_leaf. drifting = (5 − dt_branch) + (5 − dt_limb) + (5 − dt_trunk). Same rule.
 - Manager: climbing = 0. drifting = (5 − dt_leaf) + (5 − dt_branch). Same rule.
 Then Add tag dt-state-ok / dt-state-climb / dt-state-drift.
-Green flag: for owners at Stretching or Architect, if dt_leaf = 0 set dt_green_flag to the Leaf green line; else if dt_branch = 0 (Architect only) the Branch green line; else the Root green line if dt_root = 8, else the Trunk green line. For Builder owners: Root green line if dt_root = 8, else Trunk, else Limb. For team seats: Leaf green line if dt_leaf = 0, else Branch green line. For managers: Leaf green line.
+Green flag: for owners at Stretching or Architect, if dt_leaf = 0 set dt_green_flag to the Leaf green line; else if dt_branch = 0 (Architect only) the Branch green line; else the Root green line if dt_root = 5, else the Trunk green line. For Builder owners: Root green line if dt_root = 5, else Trunk, else Limb. For team seats: Leaf green line if dt_leaf = 0, else Branch green line. For managers: Leaf green line.
 Red flag: if dt_state = "drift", the drifting line for the level with the most missing items (check Root, then Trunk, then Limb, then Branch). Else if climbing > 0, the holding line for the level with the most landed items among the levels that belong lower (Leaf, then Branch, then Limb). Else if drifting > 0, the drifting line for the most-missing level. Else "Nothing jumped out. Take it again in six months and see what moved." The flag sentences are in copy/result-pages.md under "Flag lines".
 
 Step 6: If/Else on dt_role: Owner → Send Email using template "DT Result – Owner". Leadership team or Family member → "DT Result – Leadership team". Manager → "DT Result – Manager".
